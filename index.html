@@ -1,0 +1,361 @@
+<!DOCTYPE html><html lang="pt-BR" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Dra. Danielly Vitorino - Cirurgiã Dentista</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#191c1e",
+                      "on-surface": "#0b1c30",
+                      "surface": "#f8f9ff",
+                      "primary-fixed-dim": "#bec6e0",
+                      "inverse-surface": "#213145",
+                      "on-secondary-fixed": "#00201c",
+                      "surface-container": "#e5eeff",
+                      "on-primary-container": "#7c839b",
+                      "on-error-container": "#93000a",
+                      "secondary-container": "#62fae3",
+                      "inverse-primary": "#bec6e0",
+                      "tertiary-fixed": "#e0e3e5",
+                      "surface-container-high": "#dce9ff",
+                      "outline-variant": "#c6c6cd",
+                      "secondary": "#006b5f",
+                      "on-secondary-fixed-variant": "#005047",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed": "#131b2e",
+                      "surface-dim": "#cbdbf5",
+                      "primary": "#000000",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "surface-container-low": "#eff4ff",
+                      "outline": "#76777d",
+                      "on-tertiary-fixed": "#191c1e",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#007165",
+                      "on-primary": "#ffffff",
+                      "surface-tint": "#565e74",
+                      "on-error": "#ffffff",
+                      "background": "#f8f9ff",
+                      "on-surface-variant": "#45464d",
+                      "on-tertiary-fixed-variant": "#444749",
+                      "tertiary-fixed-dim": "#c4c7c9",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#d3e4fe",
+                      "primary-container": "#131b2e",
+                      "on-background": "#0b1c30",
+                      "secondary-fixed-dim": "#3cddc7",
+                      "error-container": "#ffdad6",
+                      "secondary-fixed": "#62fae3",
+                      "tertiary": "#000000",
+                      "on-tertiary-container": "#818486",
+                      "primary-fixed": "#dae2fd",
+                      "surface-variant": "#d3e4fe",
+                      "surface-bright": "#f8f9ff",
+                      "error": "#ba1a1a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "gutter": "24px",
+                      "md": "24px",
+                      "xl": "80px",
+                      "xs": "4px",
+                      "lg": "48px",
+                      "sm": "12px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "headline-sm": [
+                              "Montserrat"
+                      ],
+                      "display-lg": [
+                              "Montserrat"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "30px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar Component -->
+<nav class="bg-surface/80 dark:bg-tertiary-container/80 backdrop-blur-md sticky top-0 z-50 shadow-[0px_4px_20px_rgba(15,23,42,0.05)]">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto w-full">
+<div class="text-headline-sm font-headline-sm font-bold text-on-surface dark:text-inverse-on-surface">
+                Danielly Vitorino Cirurgiã Dentista
+            </div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary dark:border-secondary-fixed pb-1 hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#inicio">Início</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#servicos">Serviços</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#sobre">Sobre Nós</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#contatos">Contatos</a>
+</div>
+<a class="hidden md:flex items-center gap-base bg-primary text-on-primary px-md py-sm rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity active:scale-95 duration-150" href="https://wa.me/5561993949965?text=Ol%C3%A1%20doutora%20Danielly.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank">
+<span class="">Agendar Consulta</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">calendar_month</span>
+</a>
+<button class="md:hidden text-on-surface dark:text-on-tertiary-fixed">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-xl pb-xl px-gutter md:px-0 overflow-hidden" id="inicio">
+<div class="absolute inset-0 z-0">
+<img alt="Consultório odontológico moderno e limpo, com equipamentos de última geração, iluminação suave e ambiente acolhedor. Cores claras e tranquilas predominam, transmitindo profissionalismo e serenidade." class="w-full h-full object-cover opacity-20" data-alt="A modern, highly professional dental clinic setting with soft, ambient lighting. The scene features state-of-the-art dental equipment with smooth, clean lines, bathed in clinical yet serene daylight streaming through a large window. The color palette focuses on crisp whites, soft teals, and light grays, evoking a sterile warmth that reduces anxiety. The mood is calm, trustworthy, and technologically advanced, perfectly aligning with a modern corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC3GrvXZBoXWAi2RrpZ8r9eRJFqeBJ6xOIzVcryOkMmVyyQYSwy1PNUYP8uSSCUfQWmu2HOcttyRmW6pOlsNZKhvgfk3iOcayLz0tv8XnMTvoZrnZxFFbYzgf2Mg18rS0IhOULXaMG7SlTRsR3rE4NNIfVQnTTP3PMuecX13xF7vIY92gsdJtYwJ5KjpoKDBKjzSMyEoVlKvTfTOkfb3iO3uT17Kfw_bbOUgFDo1OL48lmSxH3m6_Dhq19Pbegg5pF57ISHP0zY1Y">
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/90 to-surface/40"></div>
+</div>
+<div class="max-w-container-max mx-auto relative z-10 grid md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 space-y-lg">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">
+                        Cuidado Odontológico <br class="hidden md:block">
+<span class="text-secondary">Especializado e Humanizado</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        Atendimento em Periodontia, Odontologia Hospitalar e Domiciliar no conforto da sua casa ou hospital. Tratamentos personalizados focados no seu bem-estar e saúde integral.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-md pt-base">
+<a class="inline-flex justify-center items-center gap-base bg-primary text-on-primary px-lg py-sm rounded-lg font-label-md text-label-md hover:bg-inverse-surface transition-colors" href="https://wa.me/5561993949965?text=Ol%C3%A1%20doutora%20Danielly.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">forum</span>
+                            Agendar Consulta
+                        </a>
+<a class="inline-flex justify-center items-center gap-base border border-secondary text-secondary px-lg py-sm rounded-lg font-label-md text-label-md hover:bg-secondary/5 transition-colors" href="#servicos">
+                            Conhecer Serviços
+                        </a>
+</div>
+</div>
+<div class="md:col-span-5 hidden md:block">
+<div class="relative rounded-2xl overflow-hidden shadow-[0px_4px_20px_rgba(15,23,42,0.1)]">
+<img alt="Profissional de odontologia conversando de forma empática com paciente" class="w-full h-[500px] object-cover" data-alt="A close-up, high-quality image of a female dentist in pristine clinical attire, offering a warm, empathetic smile to an unseen patient. The lighting is soft and flattering, highlighting her approachability and professionalism. The background is a gently blurred, high-end clinical environment featuring subtle teal and soft white tones. The overall composition conveys trust, expert care, and a personalized, humanized approach to dentistry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFTk3fI7Cj--481NTH4A3PIGVbxtF6S4IeKwdK6iq0QQNYMGpBlPOdRvrvHq_PySqDOIeX8WUD_52EYkkA4mQIlXwRVwK20a8XWPNTyKtXQr8naMSm8Epz1Nnb6gIgKJ1ZvNzAeHdw08vT1vxauG18b4q6bYnDQZF93vNBGZ-WKLjvKFH0xy4BVIVk_GiZGsAikXdph8NNR33Yj4BWlhiz8OF0BWgbwv4mUeATQIjSzDTio_yBFHCMGieFBNQorSO0W6C1UjfRzmrKvQ">
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xl px-gutter md:px-0 bg-surface-container-lowest" id="servicos">
+<div class="max-w-container-max mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-xl">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-base">Nossas Especialidades</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Soluções odontológicas completas, adaptadas às suas necessidades específicas, com foco em segurança e conforto.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface rounded-xl p-[32px] shadow-[0px_4px_20px_rgba(15,23,42,0.05)] border border-outline-variant/30 hover:shadow-[0px_8px_30px_rgba(15,23,42,0.08)] transition-shadow duration-300 flex flex-col h-full group">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">dentistry</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm">Periodontia</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg flex-grow">
+                            Foco na saúde das gengivas e tecidos de suporte dos dentes. Tratamento especializado para doenças periodontais e suporte seguro para implantes.
+                        </p>
+<a class="inline-flex items-center gap-xs text-secondary font-label-sm text-label-sm hover:underline" href="#">
+                            Saiba mais <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface rounded-xl p-[32px] shadow-[0px_4px_20px_rgba(15,23,42,0.05)] border border-outline-variant/30 hover:shadow-[0px_8px_30px_rgba(15,23,42,0.08)] transition-shadow duration-300 flex flex-col h-full group relative overflow-hidden">
+<div class="absolute top-4 right-4 bg-secondary/10 text-secondary px-sm py-xs rounded-full font-label-sm text-[10px] tracking-wider uppercase">
+                            Alta Complexidade
+                        </div>
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">local_hospital</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm">Odontologia Hospitalar</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg flex-grow">
+                            Atendimento especializado para pacientes sistemicamente comprometidos em ambiente hospitalar ou de UTI, garantindo total segurança.
+                        </p>
+<a class="inline-flex items-center gap-xs text-secondary font-label-sm text-label-sm hover:underline" href="#">
+                            Saiba mais <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface rounded-xl p-[32px] shadow-[0px_4px_20px_rgba(15,23,42,0.05)] border border-outline-variant/30 hover:shadow-[0px_8px_30px_rgba(15,23,42,0.08)] transition-shadow duration-300 flex flex-col h-full group relative overflow-hidden">
+<div class="absolute top-4 right-4 bg-secondary/10 text-secondary px-sm py-xs rounded-full font-label-sm text-[10px] tracking-wider uppercase">
+                            Home Care
+                        </div>
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">home_health</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm">Odontologia Domiciliar</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg flex-grow">
+                            Levamos cuidado odontológico profissional até você. Ideal para pacientes com restrição de mobilidade, idosos ou necessidades especiais.
+                        </p>
+<a class="inline-flex items-center gap-xs text-secondary font-label-sm text-label-sm hover:underline" href="#">
+                            Saiba mais <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="py-xl px-gutter md:px-0 bg-surface-container-low" id="sobre">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-xl items-center">
+<div class="order-2 md:order-1 relative">
+<div class="absolute -inset-4 bg-secondary-container/20 rounded-2xl transform -rotate-3 z-0"></div>
+<img alt="Retrato profissional da Dra. Danielly Vitorino" class="relative z-10 w-full h-[600px] object-cover rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.05)]" data-alt="A professional, polished portrait of a female dentist in a modern clinic setting. She is wearing a pristine white coat over a subtle, dark teal top. The lighting is soft and volumetric, highlighting a calm, confident, and empathetic expression. The background is a softly blurred clinical space featuring gentle white and teal hues, reflecting a sterile yet warm and premium healthcare environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVW-srdiMZsRFg3d6aauqViJ4BYpTArxkODvTf-pWkU6szvLnDZwqEUcfjFeFPiJ9DnF-1NpxDiNgalV5iKRKcNst9zZYWSKWFB1X41Aza4t_V2VwozrA3xQXCmTapvgIP2UDeZkeb2c9hQzVd2DeSNiGLNo-P-FgYaswgX6A0A3VWL-Ma2TxZm6JHWW7paPcmgOtWuzIkGggNHUb3Ufqp_RLKGpTi17VaVgYTlB99PYjBRqdF4NJSYg4Taf8iCojZ0uYG8spttlpEjw">
+<!-- Decorative Badge -->
+<div class="absolute -bottom-6 -right-6 bg-surface p-md rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.1)] z-20 hidden md:flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">verified</span>
+</div>
+<div>
+<p class="font-headline-sm text-[16px] text-on-surface">Especialista</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Alta Complexidade</p>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 space-y-md">
+<h2 class="font-headline-md text-headline-md text-on-surface">Conheça a Dra. Danielly Vitorino</h2>
+<p class="font-body-lg text-body-lg text-secondary">Especialista em Cuidado Humano e Preciso</p>
+<div class="space-y-sm font-body-md text-body-md text-on-surface-variant">
+<p class="">
+                            Com uma abordagem que une excelência técnica e profunda empatia, a Dra. Danielly dedica sua carreira a proporcionar conforto e saúde bucal, especialmente em cenários de alta complexidade.
+                        </p>
+<p class="">
+                            Sua formação especializada em Odontologia Hospitalar e Periodontia permite um manejo seguro e eficaz de pacientes sistemicamente comprometidos, garantindo que o cuidado odontológico chegue onde é mais necessário.
+                        </p>
+</div>
+<ul class="space-y-sm mt-md pt-md border-t border-outline-variant/30">
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Treinamento avançado em ambiente de UTI.</span>
+</li>
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Planos de tratamento estritamente personalizados.</span>
+</li>
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Foco inabalável no conforto e dignidade do paciente.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Contacts Section -->
+<section class="py-xl px-gutter md:px-0 bg-surface-container-highest" id="contatos">
+<div class="max-w-container-max mx-auto text-center">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-base">Entre em Contato</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto mb-lg">
+                    Estamos prontos para atender você com o cuidado e a atenção que sua saúde merece. Clique no botão abaixo para conversar diretamente conosco e agendar sua avaliação.
+                </p>
+<a class="inline-flex items-center gap-md bg-secondary text-on-secondary px-xl py-md rounded-xl font-headline-sm text-headline-sm hover:bg-secondary/90 transition-colors shadow-[0px_4px_20px_rgba(15,23,42,0.1)] active:scale-95 duration-150" href="https://wa.me/5561993949965?text=Ol%C3%A1%20doutora%20Danielly.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank">
+<svg class="text-on-secondary" fill="currentColor" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+</svg>
+                    Falar no WhatsApp
+                </a>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-highest dark:bg-tertiary-container full-width px-gutter py-lg">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto w-full gap-md">
+<div class="text-headline-sm font-headline-sm text-on-surface dark:text-on-tertiary-fixed text-center md:text-left">
+                Danielly Vitorino Cirurgiã Dentista
+            </div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="#inicio">Início</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="#servicos">Serviços</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="#sobre">Sobre Nós</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="https://wa.me/5561993949965?text=Ol%C3%A1%20doutora%20Danielly.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank">WhatsApp</a>
+</div>
+<div class="text-body-md font-body-md text-on-surface dark:text-on-tertiary-fixed text-center md:text-right text-[12px]">
+                © 2024 Danielly Vitorino Cirurgiã Dentista. Todos os direitos reservados.
+            </div>
+</div>
+</footer>
+
+
+</body></html>
