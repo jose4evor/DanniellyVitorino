@@ -60,7 +60,7 @@ function initDarkMode() {
 function initMobileMenu() {
     const menuBtn = document.getElementById("mobile-menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
-    
+
     if (!menuBtn || !mobileMenu) return;
 
     const menuIcon = menuBtn.querySelector(".material-symbols-outlined");
@@ -145,7 +145,7 @@ function initFaqAccordion() {
 
         button.addEventListener("click", () => {
             const isExpanded = button.getAttribute("aria-expanded") === "true";
-            
+
             // Close other items if desired (accordion behavior)
             faqItems.forEach(otherItem => {
                 const otherBtn = otherItem.querySelector(".faq-trigger");
@@ -212,12 +212,12 @@ function initContactForms() {
             const message = document.getElementById("corp-message").value.trim();
 
             if (!name || !company || !phone || !email) {
-                alert("Por favor, preencha os campos obrigatórios (Nome, Empresa, Email e Telefone).");
+                alert("Por favor, preencha os campos obrigatórios (Nome, Instituição/Empresa, Email e Telefone).");
                 return;
             }
 
-            const baseText = `Olá, Dra. Danielly. Tenho interesse em serviços odontológicos para empresas.`;
-            const detailsText = `\n\n*Contato:* ${name}\n*Empresa:* ${company}\n*E-mail:* ${email}\n*Telefone:* ${phone}\n*Interesse:* ${interest}\n*Mensagem:* ${message}`;
+            const baseText = `Olá, Dra. Danielly. Tenho interesse em parcerias e serviços odontológicos institucionais (Hospitais / Home Care / Lares).`;
+            const detailsText = `\n\n*Contato:* ${name}\n*Instituição/Empresa:* ${company}\n*E-mail:* ${email}\n*Telefone:* ${phone}\n*Interesse:* ${interest}\n*Mensagem:* ${message}`;
             const fullText = encodeURIComponent(baseText + detailsText);
 
             // Open WhatsApp link in new window
