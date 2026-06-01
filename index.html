@@ -166,27 +166,68 @@
           },
         }
       </script>
+      <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .dark-mode-toggle span {
+            transition: transform 0.3s ease;
+        }
+        .dark-mode-toggle:hover span {
+            transform: rotate(30deg);
+        }
+      </style>
+      <script src="main.js" defer></script>
 </head>
 <body class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
 <!-- TopNavBar Component -->
-<nav class="bg-surface/80 dark:bg-tertiary-container/80 backdrop-blur-md sticky top-0 z-50 shadow-[0px_4px_20px_rgba(15,23,42,0.05)]">
+<nav class="bg-surface/80 dark:bg-tertiary-container/80 backdrop-blur-md sticky top-0 z-50 shadow-[0px_4px_20px_rgba(15,23,42,0.05)] border-b border-outline-variant/10">
 <div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto w-full">
-<div class="text-headline-sm font-headline-sm font-bold text-on-surface dark:text-inverse-on-surface">
-                Danielly Vitorino Cirurgiã Dentista
-            </div>
+<a href="index.html" class="text-headline-sm font-headline-sm font-bold text-on-surface dark:text-inverse-on-surface hover:text-secondary transition-colors duration-300">
+                Danielly Vitorino <span class="hidden sm:inline">| Dentista</span>
+            </a>
 <div class="hidden md:flex gap-gutter items-center">
 <a class="text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary dark:border-secondary-fixed pb-1 hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#inicio">Início</a>
 <a class="text-on-surface-variant dark:text-on-tertiary-container font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#servicos">Serviços</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="servicos-empresas.html">Para Empresas</a>
 <a class="text-on-surface-variant dark:text-on-tertiary-container font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#sobre">Sobre Nós</a>
 <a class="text-on-surface-variant dark:text-on-tertiary-container font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#contatos">Contatos</a>
 </div>
-<a class="hidden md:flex items-center gap-base bg-primary text-on-primary px-md py-sm rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity active:scale-95 duration-150" href="https://wa.me/5561993949965?text=Ol%C3%A1%20doutora%20Danielly.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank">
+<div class="hidden md:flex items-center gap-md">
+<button class="dark-mode-toggle text-on-surface dark:text-inverse-on-surface p-2 rounded-lg hover:bg-surface-variant/20 transition-colors" aria-label="Alternar Modo Escuro">
+<span class="material-symbols-outlined">dark_mode</span>
+</button>
+<a class="flex items-center gap-base bg-primary dark:bg-secondary text-on-primary px-md py-sm rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity active:scale-95 duration-150" href="https://wa.me/5561993949965?text=Ol%C3%A1%20doutora%20Danielly.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank">
 <span class="">Agendar Consulta</span>
 <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">calendar_month</span>
 </a>
-<button class="md:hidden text-on-surface dark:text-on-tertiary-fixed">
+</div>
+<div class="flex items-center md:hidden gap-sm">
+<button class="dark-mode-toggle text-on-surface dark:text-inverse-on-surface p-2 rounded-lg hover:bg-surface-variant/20 transition-colors" aria-label="Alternar Modo Escuro">
+<span class="material-symbols-outlined">dark_mode</span>
+</button>
+<button id="mobile-menu-btn" class="text-on-surface dark:text-on-tertiary-fixed p-2 rounded-lg hover:bg-surface-variant/20 transition-colors" aria-label="Alternar Menu">
 <span class="material-symbols-outlined">menu</span>
 </button>
+</div>
+</div>
+<!-- Mobile Menu Drawer -->
+<div id="mobile-menu" class="hidden md:hidden bg-surface dark:bg-tertiary-container border-t border-outline-variant/30 px-gutter py-md space-y-md shadow-lg transition-all duration-300">
+<div class="flex flex-col gap-md">
+<a class="text-on-surface-variant dark:text-on-tertiary-container font-label-md text-label-md hover:text-secondary transition-colors" href="#inicio">Início</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container font-label-md text-label-md hover:text-secondary transition-colors" href="#servicos">Serviços</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container font-label-md text-label-md hover:text-secondary transition-colors" href="servicos-empresas.html">Para Empresas</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container font-label-md text-label-md hover:text-secondary transition-colors" href="#sobre">Sobre Nós</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container font-label-md text-label-md hover:text-secondary transition-colors" href="#contatos">Contatos</a>
+<hr class="border-outline-variant/30">
+<a class="flex justify-center items-center gap-base bg-primary dark:bg-secondary text-on-primary px-md py-sm rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity active:scale-95 duration-150 w-full" href="https://wa.me/5561993949965?text=Ol%C3%A1%20doutora%20Danielly.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank">
+<span class="">Agendar Consulta</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">calendar_month</span>
+</a>
+</div>
 </div>
 </nav>
 <main>
@@ -323,24 +364,202 @@
 </div>
 </div>
 </section>
-<!-- Contacts Section -->
-<section class="py-xl px-gutter md:px-0 bg-surface-container-highest" id="contatos">
-<div class="max-w-container-max mx-auto text-center">
-<h2 class="font-headline-md text-headline-md text-on-surface mb-base">Entre em Contato</h2>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto mb-lg">
-                    Estamos prontos para atender você com o cuidado e a atenção que sua saúde merece. Clique no botão abaixo para conversar diretamente conosco e agendar sua avaliação.
+<!-- Testimonials Section -->
+<section class="py-xl px-gutter md:px-0 bg-surface dark:bg-tertiary-container/30 border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-xl">
+<span class="inline-block px-sm py-xs bg-secondary/10 text-secondary rounded-full font-label-sm text-label-sm tracking-wider uppercase mb-base">Depoimentos</span>
+<h2 class="font-headline-md text-headline-md text-on-surface dark:text-inverse-on-surface">O que dizem nossos pacientes</h2>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container">A satisfação e o bem-estar de quem confia no nosso trabalho em Periodontia e Odontologia Hospitalar.</p>
+</div>
+<div class="relative max-w-4xl mx-auto px-lg">
+<!-- Slide 1 -->
+<div class="testimonial-slide flex flex-col items-center text-center space-y-md">
+<div class="w-16 h-16 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary mb-base">
+<span class="material-symbols-outlined text-[40px]">format_quote</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface dark:text-inverse-on-surface italic max-w-2xl">
+                    "O atendimento domiciliar para minha mãe foi impecável. A Dra. Danielly foi extremamente atenciosa, paciente e demonstrou um profissionalismo sem igual no tratamento periodôntico. Um alívio para toda a família."
                 </p>
-<a class="inline-flex items-center gap-md bg-secondary text-on-secondary px-xl py-md rounded-xl font-headline-sm text-headline-sm hover:bg-secondary/90 transition-colors shadow-[0px_4px_20px_rgba(15,23,42,0.1)] active:scale-95 duration-150" href="https://wa.me/5561993949965?text=Ol%C3%A1%20doutora%20Danielly.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank">
-<svg class="text-on-secondary" fill="currentColor" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
-<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
-</svg>
-                    Falar no WhatsApp
-                </a>
+<div>
+<h4 class="font-headline-sm text-[18px] text-on-surface dark:text-inverse-on-surface font-bold">Mariana Silva</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-tertiary-container">Filha da paciente Sra. Augusta (Atendimento Domiciliar)</p>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="testimonial-slide hidden flex flex-col items-center text-center space-y-md">
+<div class="w-16 h-16 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary mb-base">
+<span class="material-symbols-outlined text-[40px]">format_quote</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface dark:text-inverse-on-surface italic max-w-2xl">
+                    "Como paciente cardíaco, precisei de acompanhamento odontológico hospitalar antes de uma cirurgia. O cuidado preventivo e a dedicação da Dra. Danielly na UTI me deram total segurança e evitaram infecções severas."
+                </p>
+<div>
+<h4 class="font-headline-sm text-[18px] text-on-surface dark:text-inverse-on-surface font-bold">Carlos Alberto Souza</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-tertiary-container">Paciente de Odontologia Hospitalar</p>
+</div>
+</div>
+<!-- Slide 3 -->
+<div class="testimonial-slide hidden flex flex-col items-center text-center space-y-md">
+<div class="w-16 h-16 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary mb-base">
+<span class="material-symbols-outlined text-[40px]">format_quote</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface dark:text-inverse-on-surface italic max-w-2xl">
+                    "Excelente profissional! Sempre tive muito medo de tratamentos de gengiva, mas a abordagem humanizada e a paciência da Dra. Danielly mudaram completamente minha experiência de ir ao dentista."
+                </p>
+<div>
+<h4 class="font-headline-sm text-[18px] text-on-surface dark:text-inverse-on-surface font-bold">Beatriz Pinheiro</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-tertiary-container">Paciente de Periodontia</p>
+</div>
+</div>
+<!-- Navigation Buttons -->
+<button id="testimonial-prev" class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface-container dark:bg-inverse-surface flex items-center justify-center text-on-surface dark:text-inverse-on-surface hover:bg-secondary hover:text-on-secondary transition-colors" aria-label="Depoimento Anterior">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button id="testimonial-next" class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-surface-container dark:bg-inverse-surface flex items-center justify-center text-on-surface dark:text-inverse-on-surface hover:bg-secondary hover:text-on-secondary transition-colors" aria-label="Próximo Depoimento">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-xl px-gutter md:px-0 bg-surface-container-low dark:bg-tertiary-container/10 border-t border-outline-variant/10">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-xl">
+<span class="inline-block px-sm py-xs bg-secondary/10 text-secondary rounded-full font-label-sm text-label-sm tracking-wider uppercase mb-base">Perguntas Frequentes</span>
+<h2 class="font-headline-md text-headline-md text-on-surface dark:text-inverse-on-surface">Dúvidas Comuns</h2>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container">Esclareça suas principais dúvidas sobre Periodontia, Odontologia Hospitalar e Domiciliar.</p>
+</div>
+<div class="space-y-md">
+<!-- FAQ Item 1 -->
+<div class="faq-item border border-outline-variant/30 dark:border-outline-variant/10 rounded-xl bg-surface dark:bg-tertiary-container/30 overflow-hidden">
+<button class="faq-trigger w-full flex justify-between items-center p-md text-left font-headline-sm text-[18px] text-on-surface dark:text-inverse-on-surface hover:bg-surface-container-low dark:hover:bg-tertiary-container/50 transition-colors" aria-expanded="false">
+<span>O que faz a Odontologia Hospitalar e quem precisa dela?</span>
+<span class="faq-icon material-symbols-outlined transition-transform duration-300 text-secondary">expand_more</span>
+</button>
+<div class="faq-content hidden p-md pt-0 text-body-md text-on-surface-variant dark:text-on-tertiary-container bg-surface-container-lowest/30 dark:bg-tertiary-container/20">
+<p class="pt-sm border-t border-outline-variant/10">A Odontologia Hospitalar foca no cuidado da saúde bucal de pacientes internados, em UTI ou com condições sistêmicas complexas (como cardiopatias, diabetes descompensado ou pacientes oncológicos). O objetivo é prevenir infecções graves de origem bucal que podem comprometer a saúde geral do paciente e prolongar o tempo de internação.</p>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="faq-item border border-outline-variant/30 dark:border-outline-variant/10 rounded-xl bg-surface dark:bg-tertiary-container/30 overflow-hidden">
+<button class="faq-trigger w-full flex justify-between items-center p-md text-left font-headline-sm text-[18px] text-on-surface dark:text-inverse-on-surface hover:bg-surface-container-low dark:hover:bg-tertiary-container/50 transition-colors" aria-expanded="false">
+<span>Como funciona o atendimento odontológico domiciliar (Home Care)?</span>
+<span class="faq-icon material-symbols-outlined transition-transform duration-300 text-secondary">expand_more</span>
+</button>
+<div class="faq-content hidden p-md pt-0 text-body-md text-on-surface-variant dark:text-on-tertiary-container bg-surface-container-lowest/30 dark:bg-tertiary-container/20">
+<p class="pt-sm border-t border-outline-variant/10">O atendimento odontológico home care é realizado no conforto da residência do paciente. Levamos equipamentos odontológicos portáteis modernos (como consultório portátil com compressor, sugador e fotopolimerizador) que nos permitem realizar restaurações, extrações, limpezas, raspagens periodontais e tratamentos de dor de forma segura e humanizada, ideal para idosos, pessoas acamadas ou com mobilidade reduzida.</p>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="faq-item border border-outline-variant/30 dark:border-outline-variant/10 rounded-xl bg-surface dark:bg-tertiary-container/30 overflow-hidden">
+<button class="faq-trigger w-full flex justify-between items-center p-md text-left font-headline-sm text-[18px] text-on-surface dark:text-inverse-on-surface hover:bg-surface-container-low dark:hover:bg-tertiary-container/50 transition-colors" aria-expanded="false">
+<span>Qual a diferença entre a limpeza comum e o tratamento periodontal?</span>
+<span class="faq-icon material-symbols-outlined transition-transform duration-300 text-secondary">expand_more</span>
+</button>
+<div class="faq-content hidden p-md pt-0 text-body-md text-on-surface-variant dark:text-on-tertiary-container bg-surface-container-lowest/30 dark:bg-tertiary-container/20">
+<p class="pt-sm border-t border-outline-variant/10">A profilaxia comum (limpeza) é preventiva, focada na remoção de placa bacteriana e manchas superficiais acima da linha da gengiva. Já o tratamento periodontal envolve a raspagem e o alisamento radicular (abaixo da linha da gengiva), com o objetivo de remover o tártaro acumulado nas raízes dos dentes, tratar infecções ativas da gengiva (gengivite e periodontite) e conter a perda óssea.</p>
+</div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="faq-item border border-outline-variant/30 dark:border-outline-variant/10 rounded-xl bg-surface dark:bg-tertiary-container/30 overflow-hidden">
+<button class="faq-trigger w-full flex justify-between items-center p-md text-left font-headline-sm text-[18px] text-on-surface dark:text-inverse-on-surface hover:bg-surface-container-low dark:hover:bg-tertiary-container/50 transition-colors" aria-expanded="false">
+<span>Quais as formas de pagamento e como agendar?</span>
+<span class="faq-icon material-symbols-outlined transition-transform duration-300 text-secondary">expand_more</span>
+</button>
+<div class="faq-content hidden p-md pt-0 text-body-md text-on-surface-variant dark:text-on-tertiary-container bg-surface-container-lowest/30 dark:bg-tertiary-container/20">
+<p class="pt-sm border-t border-outline-variant/10">Você pode agendar sua consulta diretamente por WhatsApp clicando em nossos botões de agendamento ou preenchendo o formulário de contato. Aceitamos cartões de crédito/débito, PIX e oferecemos documentação completa para solicitação de reembolso junto ao seu plano de saúde/odontológico (especialmente para Odontologia Hospitalar).</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contacts Section -->
+<section class="py-xl px-gutter md:px-0 bg-surface-container-highest dark:bg-tertiary-container border-t border-outline-variant/10" id="contatos">
+<div class="max-w-container-max mx-auto">
+<div class="grid md:grid-cols-12 gap-xl">
+<!-- Info Column -->
+<div class="md:col-span-5 space-y-lg text-left">
+<div>
+<span class="inline-block px-sm py-xs bg-secondary/10 text-secondary rounded-full font-label-sm text-label-sm tracking-wider uppercase mb-base">Canais de Atendimento</span>
+<h2 class="font-headline-md text-headline-md text-on-surface dark:text-inverse-on-surface">Entre em Contato</h2>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container mt-sm">
+                        Estamos prontos para atender você com o cuidado e a atenção que sua saúde merece. Solicite um agendamento ou tire suas dúvidas diretamente conosco.
+                    </p>
+</div>
+<div class="space-y-md">
+<div class="flex items-start gap-md">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[16px] text-on-surface dark:text-inverse-on-surface font-bold">Telefone / WhatsApp</h4>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container">(61) 99394-9965</p>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[16px] text-on-surface dark:text-inverse-on-surface font-bold">E-mail</h4>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container">contato@daniellyvitorino.com.br</p>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[16px] text-on-surface dark:text-inverse-on-surface font-bold">Área de Cobertura</h4>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container">Brasília - DF e Entorno (Atendimento Hospitalar e Domiciliar)</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Form Column -->
+<div class="md:col-span-7">
+<div class="bg-surface dark:bg-tertiary-container/40 p-lg md:p-[40px] rounded-2xl shadow-[0px_4px_20px_rgba(15,23,42,0.05)] border border-outline-variant/30 dark:border-outline-variant/10">
+<h3 class="font-headline-sm text-headline-sm text-on-surface dark:text-inverse-on-surface mb-md">Pré-Agendamento de Consulta</h3>
+<form id="booking-form" class="space-y-md text-left">
+<div>
+<label for="form-name" class="block font-label-md text-label-md text-on-surface dark:text-inverse-on-surface mb-xs">Nome Completo *</label>
+<input type="text" id="form-name" placeholder="Seu nome" class="w-full bg-surface-container-lowest dark:bg-tertiary-container border border-outline-variant/40 dark:border-outline-variant/20 focus:border-secondary dark:focus:border-secondary-fixed rounded-lg p-sm outline-none text-on-surface dark:text-inverse-on-surface" required>
+</div>
+<div class="grid sm:grid-cols-2 gap-md">
+<div>
+<label for="form-phone" class="block font-label-md text-label-md text-on-surface dark:text-inverse-on-surface mb-xs">Telefone / WhatsApp *</label>
+<input type="tel" id="form-phone" placeholder="(61) 99999-9999" class="w-full bg-surface-container-lowest dark:bg-tertiary-container border border-outline-variant/40 dark:border-outline-variant/20 focus:border-secondary dark:focus:border-secondary-fixed rounded-lg p-sm outline-none text-on-surface dark:text-inverse-on-surface" required>
+</div>
+<div>
+<label for="form-service" class="block font-label-md text-label-md text-on-surface dark:text-inverse-on-surface mb-xs">Serviço de Interesse</label>
+<select id="form-service" class="w-full bg-surface-container-lowest dark:bg-tertiary-container border border-outline-variant/40 dark:border-outline-variant/20 focus:border-secondary dark:focus:border-secondary-fixed rounded-lg p-sm outline-none text-on-surface dark:text-inverse-on-surface">
+<option value="Periodontia">Periodontia</option>
+<option value="Odontologia Hospitalar">Odontologia Hospitalar</option>
+<option value="Odontologia Domiciliar">Odontologia Domiciliar</option>
+<option value="Outro">Outro Tratamento</option>
+</select>
+</div>
+</div>
+<div>
+<label for="form-message" class="block font-label-md text-label-md text-on-surface dark:text-inverse-on-surface mb-xs">Mensagem ou Observações (Opcional)</label>
+<textarea id="form-message" rows="4" placeholder="Descreva brevemente sua necessidade ou caso clínico..." class="w-full bg-surface-container-lowest dark:bg-tertiary-container border border-outline-variant/40 dark:border-outline-variant/20 focus:border-secondary dark:focus:border-secondary-fixed rounded-lg p-sm outline-none text-on-surface dark:text-inverse-on-surface"></textarea>
+</div>
+<button type="submit" class="w-full flex justify-center items-center gap-base bg-secondary text-on-secondary px-lg py-sm rounded-lg font-label-md text-label-md hover:bg-secondary/90 transition-colors shadow-sm active:scale-95 duration-150">
+<span>Enviar Solicitação pelo WhatsApp</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</div>
 </div>
 </section>
 </main>
 <!-- Footer Component -->
-<footer class="bg-surface-container-highest dark:bg-tertiary-container full-width px-gutter py-lg">
+<footer class="bg-surface-container-highest dark:bg-tertiary-container full-width px-gutter py-lg border-t border-outline-variant/20 dark:border-outline-variant/10">
 <div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto w-full gap-md">
 <div class="text-headline-sm font-headline-sm text-on-surface dark:text-on-tertiary-fixed text-center md:text-left">
                 Danielly Vitorino Cirurgiã Dentista
@@ -348,10 +567,11 @@
 <div class="flex flex-wrap justify-center gap-md">
 <a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="#inicio">Início</a>
 <a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="#servicos">Serviços</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="servicos-empresas.html">Para Empresas</a>
 <a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="#sobre">Sobre Nós</a>
 <a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant font-label-sm text-label-sm hover:text-secondary dark:hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100" href="https://wa.me/5561993949965?text=Ol%C3%A1%20doutora%20Danielly.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank">WhatsApp</a>
 </div>
-<div class="text-body-md font-body-md text-on-surface dark:text-on-tertiary-fixed text-center md:text-right text-[12px]">
+<div class="text-body-md font-body-md text-on-surface-variant dark:text-on-tertiary-fixed-variant text-center md:text-right text-[12px]">
                 © 2024 Danielly Vitorino Cirurgiã Dentista. Todos os direitos reservados.
             </div>
 </div>
