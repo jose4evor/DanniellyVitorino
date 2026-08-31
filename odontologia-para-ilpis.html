@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Odontologia para ILPIs em Brasília | Vitorino Odontologia</title>
-<meta name="description" content="Assistência odontogeriatra para ILPIs e lares de idosos em Brasília. Prevenção de pneumonia aspirativa, checkups no local e protocolos para Alzheimer e Parkinson.">
+<meta name="description" content="Assistência odontológica para Instituições de Longa Permanência para Idosos (ILPIs) em Brasília. Visitas preventivas, protocolos Alzheimer/Parkinson, prevenção de pneumonia.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,26 +14,40 @@
 <header>
   <div class="container nav">
     <a class="logo" href="index.html">VITORINO<span>ODONTOLOGIA</span></a>
-    <nav><ul class="menu" id="menu">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="code.html">A Vitorino</a></li>
-      <li><a href="servicos-empresas.html">Atendimentos</a></li>
-      <li><a href="servicos-empresas.html#parcerias">Parcerias</a></li>
-      <li><a href="index.html#contato">Contato</a></li>
-    </ul></nav>
-    <a class="btn btn-gold" href="https://wa.me/55619939965?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20atendimento%20em%20ILPI." target="_blank" rel="noopener">Quero Ser Parceiro</a>
-    <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')" aria-label="Abrir menu"><span class="material-icons">menu</span></button>
+    <nav>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="code.html">A Vitorino</a></li>
+        <li class="has-dropdown">
+          <a href="servicos-empresas.html">Atendimentos</a>
+          <div class="dropdown">
+            <span class="dd-title">Atendimentos</span>
+            <a href="odontologia-domiciliar.html"><span class="material-icons">home</span>Odontologia Domiciliar</a>
+            <a href="odontologia-hospitalar.html"><span class="material-icons">local_hospital</span>Odontologia Hospitalar</a>
+            <a href="atendimento-a-beira-leito.html"><span class="material-icons">bed</span>Atendimento à Beira-Leito</a>
+            <a href="odontologia-para-home-care.html"><span class="material-icons">medical_services</span>Home Care</a>
+            <a href="odontologia-para-ilpis.html"><span class="material-icons">elderly</span>ILPIs</a>
+            <a href="odontologia-para-pacientes-oncologicos.html"><span class="material-icons">health_and_safety</span>Pacientes Oncológicos</a>
+          </div>
+        </li>
+        <li><a href="educacao-continuada.html">Educação</a></li>
+        <li><a href="servicos-empresas.html#parcerias">Parcerias</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-gold" href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20parceria%20para%20ILPI." target="_blank" rel="noopener">Falar com a Vitorino</a>
+    <button class="burger" onclick="toggleMenu()" aria-label="Abrir menu"><span class="material-icons">menu</span></button>
   </div>
 </header>
 
 <section class="hero">
   <div class="container">
-    <span class="eyebrow">Odontologia para ILPIs</span>
+    <span class="eyebrow">Soluções para ILPIs</span>
     <h1>Saúde bucal dos residentes, <span>cuidada no local</span>.</h1>
-    <p>Assistência odontogeriatra continuada para instituições de longa permanência, com foco na prevenção de pneumonia aspirativa e na manutenção da saúde bucal.</p>
+    <p>Assistência odontogeriatra continuada em Instituições de Longa Permanência para Idosos (ILPIs), combinando prevenção, manutenção periodontal e protocolos específicos para síndromes demenciais.</p>
     <div class="btns">
-      <a class="btn btn-gold" href="https://wa.me/55619939965?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20atendimento%20em%20ILPI." target="_blank" rel="noopener">Quero Ser Parceiro</a>
-      <a class="btn btn-outline" href="servicos-empresas.html#parcerias">Conhecer Parcerias</a>
+      <a class="btn btn-gold" href="servicos-empresas.html#parcerias">Quero Ser Parceiro</a>
+      <a class="btn btn-outline" href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20parceria%20para%20ILPI." target="_blank" rel="noopener">Falar com a Vitorino</a>
     </div>
   </div>
 </section>
@@ -41,27 +55,27 @@
 <section>
   <div class="container">
     <div class="sec-head">
-      <span class="eyebrow">Assistência à ILPI</span>
-      <h2>O que oferecemos à instituição</h2>
-      <p>Protocolos adaptados à rotina da instituição e às condições clínicas dos residentes.</p>
+      <span class="eyebrow">Atuação em ILPIs</span>
+      <h2>Protocolos odontológicos especializados para lares de idosos</h2>
+      <p>Acompanhamento periódico para preservar a qualidade de vida e o conforto dos residentes.</p>
     </div>
     <div class="grid g3">
-      <div class="card"><div class="icon"><span class="material-icons">event_available</span></div><h3>Visitas preventivas</h3><p>Checkups clínicos periódicos no local, sem deslocamento.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">psychology</span></div><h3>Protocolos específicos</h3><p>Atendimento adaptado para pacientes com Alzheimer e Parkinson.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">healing</span></div><h3>Manutenção periodontal</h3><p>Prevenção de sangramento gengival crônico e perda de elementos dentais.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">shield</span></div><h3>Prevenção de pneumonia</h3><p>Controle de biofilme bucal e prevenção de pneumonia aspirativa.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">groups</span></div><h3>Capacitação da equipe</h3><p>Orientação de cuidadores e equipe de enfermagem da instituição.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">contact_page</span></div><h3>Relatórios clínicos</h3><p>Documentação detalhada para a equipe responsável.</p></div>
+      <div class="card"><div class="icon"><span class="material-icons">event</span></div><h3>Visitas preventivas</h3><p>Avaliações periódicas e profilaxia para manter a saúde gengival e dental de todos os residentes.</p></div>
+      <div class="card"><div class="icon"><span class="material-icons">psychology</span></div><h3>Protocolos específicos</h3><p>Abordagem adaptada e acolhedora para pacientes com Alzheimer, Parkinson e declínio cognitivo.</p></div>
+      <div class="card"><div class="icon"><span class="material-icons">dentistry</span></div><h3>Manutenção periodontal</h3><p>Tratamento de gengivites e periodontite, prevenindo perda dental e desconforto mastigatório.</p></div>
+      <div class="card"><div class="icon"><span class="material-icons">shield</span></div><h3>Prevenção de pneumonia</h3><p>Controle do biofilme bucal para prevenir pneumonia aspirativa por disfagia em idosos.</p></div>
+      <div class="card"><div class="icon"><span class="material-icons">school</span></div><h3>Capacitação da equipe</h3><p>Treinamento prático dos cuidadores da instituição para higiene bucal diária adequada.</p></div>
+      <div class="card"><div class="icon"><span class="material-icons">description</span></div><h3>Relatórios clínicos</h3><p>Registros e boletins de saúde bucal individuais enviados aos familiares e à direção da ILPI.</p></div>
     </div>
   </div>
 </section>
 
 <section class="cta">
   <div class="container">
-    <span class="eyebrow">Parceria com ILPIs</span>
-    <h2>Sua instituição pode oferecer cuidado odontológico aos residentes</h2>
-    <p>Agende uma conversa para apresentar nossos protocolos e propostas de convênio.</p>
-    <a class="btn btn-gold" href="https://wa.me/55619939965?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20atendimento%20em%20ILPI." target="_blank" rel="noopener">Quero Ser Parceiro</a>
+    <span class="eyebrow">Parcerias com ILPIs</span>
+    <h2>Quer oferecer cuidado odontológico na sua ILPI?</h2>
+    <p>Agende uma reunião para conhecer nossos planos de parceria continuada em Brasília e entorno.</p>
+    <a class="btn btn-gold" href="servicos-empresas.html#parcerias">Quero Ser Parceiro</a>
   </div>
 </section>
 
@@ -69,14 +83,24 @@
   <div class="container">
     <div class="f-grid">
       <div class="f-brand"><b>VITORINO<span>ODONTOLOGIA</span></b><p>Odontologia especializada em cuidado domiciliar, hospitalar e institucional.</p></div>
-      <div><h4>Atendimentos</h4><a href="odontologia-domiciliar.html">Domiciliar</a><a href="odontologia-hospitalar.html">Hospitalar</a><a href="odontologia-para-ilpis.html">ILPIs</a><a href="odontologia-para-home-care.html">Home Care</a></div>
-      <div><h4>Institucional</h4><a href="code.html">Sobre a Vitorino</a><a href="servicos-empresas.html#parcerias">Parcerias</a><a href="servicos-empresas.html#educacao">Educação</a><a href="index.html#contato">Contato</a></div>
-      <div><h4>Contato</h4><a href="https://wa.me/55619939965" target="_blank" rel="noopener">WhatsApp</a><a href="#">Instagram</a><a href="mailto:contato@daniellyvitorino.com.br">E-mail</a><span>Brasília, DF</span></div>
+      <div><h4>Atendimentos</h4><a href="odontologia-domiciliar.html">Domiciliar</a><a href="odontologia-hospitalar.html">Hospitalar</a><a href="atendimento-a-beira-leito.html">À Beira-Leito</a><a href="odontologia-para-home-care.html">Home Care</a><a href="odontologia-para-ilpis.html">ILPIs</a><a href="odontologia-para-pacientes-oncologicos.html">Pacientes Oncológicos</a></div>
+      <div><h4>Institucional</h4><a href="code.html">Sobre a Vitorino</a><a href="code.html#equipe">Nossa equipe</a><a href="educacao-continuada.html">Educação</a><a href="servicos-empresas.html#parcerias">Parcerias</a><a href="index.html#contato">Contato</a></div>
+      <div><h4>Contato</h4><a href="https://wa.me/556182559552" target="_blank" rel="noopener">WhatsApp</a><a href="#">Instagram</a><a href="mailto:contato@daniellyvitorino.com.br">E-mail</a><span>Brasília, DF e entorno</span></div>
     </div>
     <div class="copy">© 2026 Vitorino Odontologia. Todos os direitos reservados.</div>
   </div>
 </footer>
 
-<a class="wa" href="https://wa.me/55619939965?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20atendimento%20em%20ILPI." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Falar com a Vitorino</a>
+<a class="wa" href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20parceria%20para%20ILPI." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Falar com a Vitorino</a>
+
+<script>
+function toggleMenu(){
+  var m=document.getElementById('menu');
+  m.classList.toggle('open');
+  var dd=m.querySelector('.has-dropdown');
+  if(dd){dd.classList.toggle('open');}
+}
+</script>
 </body>
 </html>
+

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Odontologia para Pacientes Oncológicos | Vitorino Odontologia</title>
-<meta name="description" content="Atuação odontológica integrada ao cuidado de pacientes oncológicos em Brasília. Laserterapia para mucosite, controle de dor e xerostomia.">
+<meta name="description" content="Atendimento odontológico para pacientes oncológicos em Brasília. Laserterapia para mucosite, controle de dor, xerostomia e triagem pré-tratamento oncológico.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,15 +14,29 @@
 <header>
   <div class="container nav">
     <a class="logo" href="index.html">VITORINO<span>ODONTOLOGIA</span></a>
-    <nav><ul class="menu" id="menu">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="code.html">A Vitorino</a></li>
-      <li><a href="servicos-empresas.html">Atendimentos</a></li>
-      <li><a href="servicos-empresas.html#parcerias">Parcerias</a></li>
-      <li><a href="index.html#contato">Contato</a></li>
-    </ul></nav>
-    <a class="btn btn-gold" href="https://wa.me/55619939965?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20atendimento%20a%20pacientes%20oncol%C3%B3gicos." target="_blank" rel="noopener">Falar com a Vitorino</a>
-    <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')" aria-label="Abrir menu"><span class="material-icons">menu</span></button>
+    <nav>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="code.html">A Vitorino</a></li>
+        <li class="has-dropdown">
+          <a href="servicos-empresas.html">Atendimentos</a>
+          <div class="dropdown">
+            <span class="dd-title">Atendimentos</span>
+            <a href="odontologia-domiciliar.html"><span class="material-icons">home</span>Odontologia Domiciliar</a>
+            <a href="odontologia-hospitalar.html"><span class="material-icons">local_hospital</span>Odontologia Hospitalar</a>
+            <a href="atendimento-a-beira-leito.html"><span class="material-icons">bed</span>Atendimento à Beira-Leito</a>
+            <a href="odontologia-para-home-care.html"><span class="material-icons">medical_services</span>Home Care</a>
+            <a href="odontologia-para-ilpis.html"><span class="material-icons">elderly</span>ILPIs</a>
+            <a href="odontologia-para-pacientes-oncologicos.html"><span class="material-icons">health_and_safety</span>Pacientes Oncológicos</a>
+          </div>
+        </li>
+        <li><a href="educacao-continuada.html">Educação</a></li>
+        <li><a href="servicos-empresas.html#parcerias">Parcerias</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-gold" href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20odontol%C3%B3gico%20para%20paciente%20oncol%C3%B3gico." target="_blank" rel="noopener">Agendar Atendimento</a>
+    <button class="burger" onclick="toggleMenu()" aria-label="Abrir menu"><span class="material-icons">menu</span></button>
   </div>
 </header>
 
@@ -30,10 +44,10 @@
   <div class="container">
     <span class="eyebrow">Odontologia Oncológica</span>
     <h1>Cuidado odontológico integrado ao <span>tratamento oncológico</span>.</h1>
-    <p>Atuação odontológica especializada para pacientes oncológicos, com foco na prevenção e no manejo das complicações bucais do tratamento.</p>
+    <p>Prevenção e manejo de complicações bucais decorrentes da radioterapia e quimioterapia, proporcionando alívio e qualidade de vida durante todas as fases do tratamento.</p>
     <div class="btns">
-      <a class="btn btn-gold" href="https://wa.me/55619939965?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20atendimento%20a%20pacientes%20oncol%C3%B3gicos." target="_blank" rel="noopener">Falar com a Vitorino</a>
-      <a class="btn btn-outline" href="servicos-empresas.html#profissionais">Para Profissionais</a>
+      <a class="btn btn-gold" href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20odontol%C3%B3gico%20para%20paciente%20oncol%C3%B3gico." target="_blank" rel="noopener">Agendar Atendimento</a>
+      <a class="btn btn-outline" href="code.html">Conhecer a Vitorino</a>
     </div>
   </div>
 </section>
@@ -41,27 +55,27 @@
 <section>
   <div class="container">
     <div class="sec-head">
-      <span class="eyebrow">Cuidado oncológico</span>
-      <h2>Como atuamos</h2>
-      <p>Atuação integrada ao cuidado multiprofissional, com foco na qualidade de vida do paciente.</p>
+      <span class="eyebrow">Cuidados Especializados</span>
+      <h2>Manejo odontológico para pacientes em oncologia</h2>
+      <p>Suporte focado em mitigar efeitos colaterais e garantir segurança durante a quimio e radioterapia.</p>
     </div>
     <div class="grid g3">
-      <div class="card"><div class="icon"><span class="material-icons">bolt</span></div><h3>Laserterapia para mucosite</h3><p>Prevenção e tratamento de mucosite induzida por quimio e radioterapia.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">water_drop</span></div><h3>Controle de xerostomia</h3><p>Estímulo da salivação e alívio do ressecamento bucal.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">healing</span></div><h3>Controle de dor</h3><p>Manejo do desconforto e das lesões na mucosa oral.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">clinical_notes</span></div><h3>Triagem pré-tratamento</h3><p>Eliminação de focos infecciosos antes da quimio ou radioterapia.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">groups</span></div><h3>Atuação integrada</h3><p>Trabalho conjunto com a equipe de oncologia e cuidados paliativos.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">home_health</span></div><h3>Atendimento no domicílio</h3><p>Cuidado no ambiente em que o paciente está.</p></div>
+      <div class="card"><div class="icon"><span class="material-icons">bolt</span></div><h3>Laserterapia para mucosite</h3><p>Aplicação de laser de baixa potência para prevenção e tratamento acelerado da mucosite oral.</p></div>
+      <div class="card"><div class="icon"><span class="material-icons">water_drop</span></div><h3>Controle de xerostomia</h3><p>Protocolos e estímulo para aliviar a sensação de boca seca severa induzida pelos tratamentos.</p></div>
+      <div class="card"><div class="icon"><span class="material-icons">healing</span></div><h3>Controle de dor</h3><p>Ações terapêuticas minimamente invasivas para redução do desconforto na mucosa bucal.</p></div>
+      <div class="card"><div class="icon"><span class="material-icons">clinical_notes</span></div><h3>Triagem pré-tratamento</h3><p>Adequação da cavidade bucal antes de iniciar quimioterapia ou radioterapia de cabeça e pescoço.</p></div>
+      <div class="card"><div class="icon"><span class="material-icons">groups</span></div><h3>Atuação integrada</h3><p>Alinhamento técnico direto com médicos oncologistas, radioterapeutas e hematologistas.</p></div>
+      <div class="card"><div class="icon"><span class="material-icons">home</span></div><h3>Atendimento no domicílio</h3><p>Atendimento acolhedor na residência do paciente quando houver restrição de mobilidade ou imunossupressão.</p></div>
     </div>
   </div>
 </section>
 
 <section class="cta">
   <div class="container">
-    <span class="eyebrow">Cuidado Oncológico</span>
-    <h2>Paciente oncológico precisa de cuidado odontológico?</h2>
-    <p>Atendimento integrado ao cuidado multiprofissional, em Brasília e entorno.</p>
-    <a class="btn btn-gold" href="https://wa.me/55619939965?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20atendimento%20a%20pacientes%20oncol%C3%B3gicos." target="_blank" rel="noopener">Falar com a Vitorino</a>
+    <span class="eyebrow">Atendimento Oncológico</span>
+    <h2>Necessita de suporte odontológico durante o tratamento oncológico?</h2>
+    <p>Fale conosco para agendar uma consulta preventiva ou curativa em Brasília e entorno.</p>
+    <a class="btn btn-gold" href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20odontol%C3%B3gico%20para%20paciente%20oncol%C3%B3gico." target="_blank" rel="noopener">Agendar Atendimento</a>
   </div>
 </section>
 
@@ -69,14 +83,24 @@
   <div class="container">
     <div class="f-grid">
       <div class="f-brand"><b>VITORINO<span>ODONTOLOGIA</span></b><p>Odontologia especializada em cuidado domiciliar, hospitalar e institucional.</p></div>
-      <div><h4>Atendimentos</h4><a href="odontologia-domiciliar.html">Domiciliar</a><a href="odontologia-hospitalar.html">Hospitalar</a><a href="odontologia-para-ilpis.html">ILPIs</a><a href="odontologia-para-home-care.html">Home Care</a></div>
-      <div><h4>Institucional</h4><a href="code.html">Sobre a Vitorino</a><a href="servicos-empresas.html#parcerias">Parcerias</a><a href="servicos-empresas.html#educacao">Educação</a><a href="index.html#contato">Contato</a></div>
-      <div><h4>Contato</h4><a href="https://wa.me/55619939965" target="_blank" rel="noopener">WhatsApp</a><a href="#">Instagram</a><a href="mailto:contato@daniellyvitorino.com.br">E-mail</a><span>Brasília, DF</span></div>
+      <div><h4>Atendimentos</h4><a href="odontologia-domiciliar.html">Domiciliar</a><a href="odontologia-hospitalar.html">Hospitalar</a><a href="atendimento-a-beira-leito.html">À Beira-Leito</a><a href="odontologia-para-home-care.html">Home Care</a><a href="odontologia-para-ilpis.html">ILPIs</a><a href="odontologia-para-pacientes-oncologicos.html">Pacientes Oncológicos</a></div>
+      <div><h4>Institucional</h4><a href="code.html">Sobre a Vitorino</a><a href="code.html#equipe">Nossa equipe</a><a href="educacao-continuada.html">Educação</a><a href="servicos-empresas.html#parcerias">Parcerias</a><a href="index.html#contato">Contato</a></div>
+      <div><h4>Contato</h4><a href="https://wa.me/556182559552" target="_blank" rel="noopener">WhatsApp</a><a href="#">Instagram</a><a href="mailto:contato@daniellyvitorino.com.br">E-mail</a><span>Brasília, DF e entorno</span></div>
     </div>
     <div class="copy">© 2026 Vitorino Odontologia. Todos os direitos reservados.</div>
   </div>
 </footer>
 
-<a class="wa" href="https://wa.me/55619939965?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20atendimento%20a%20pacientes%20oncol%C3%B3gicos." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Falar com a Vitorino</a>
+<a class="wa" href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20odontol%C3%B3gico." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Agende seu atendimento</a>
+
+<script>
+function toggleMenu(){
+  var m=document.getElementById('menu');
+  m.classList.toggle('open');
+  var dd=m.querySelector('.has-dropdown');
+  if(dd){dd.classList.toggle('open');}
+}
+</script>
 </body>
 </html>
+
