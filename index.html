@@ -1,287 +1,560 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vitorino Odontologia | Odontologia Domiciliar, Hospitalar e Institucional em Brasília</title>
-<meta name="description" content="Odontologia domiciliar, hospitalar e institucional em Brasília e entorno. Atendimento para pacientes acamados, idosos, em Home Care e hospitalizados. Dentista especializada em cuidado humanizado.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>
-/* Dropdown CSS */
-.has-dropdown{position:relative}
-.dropdown{position:absolute;top:100%;left:0;background:var(--navy);border:1px solid rgba(201,162,39,.25);border-top:3px solid var(--gold);border-radius:0 0 8px 8px;min-width:280px;padding:10px 0;opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;box-shadow:0 16px 34px rgba(0,0,0,.3)}
-.has-dropdown:hover .dropdown,.has-dropdown:focus-within .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
-.dropdown a{display:flex;align-items:center;gap:10px;padding:11px 20px;color:rgba(255,255,255,.85);font-size:.85rem;text-decoration:none;transition:.15s}
-.dropdown a:hover{background:rgba(201,162,39,.12);color:var(--gold2)}
-.dropdown a .material-icons{font-size:1.1rem;color:var(--gold);flex-shrink:0;width:1.2rem;text-align:center}
-.dropdown .dd-title{display:block;padding:8px 20px;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
-.has-dropdown > a::after{content:"keyboard_arrow_down";font-family:'Material Icons';font-size:1rem;margin-left:2px;transition:.2s}
-.has-dropdown:hover > a::after{transform:rotate(180deg)}
-@media(max-width:960px){
-.dropdown{position:static;opacity:1;visibility:visible;transform:none;border:0;border-left:2px solid var(--gold);border-radius:0;min-width:0;margin:6px 0 0 14px;padding:0;box-shadow:none;display:none}
-.has-dropdown.open .dropdown{display:block}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitorino Odontologia | Odontologia Domiciliar, Hospitalar e Institucional em Brasília</title>
+  <meta name="description"
+    content="Odontologia domiciliar, hospitalar e institucional em Brasília e entorno. Atendimento para pacientes acamados, idosos, em Home Care e hospitalizados. Dentista especializada em cuidado humanizado.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Dropdown CSS */
+    .has-dropdown {
+      position: relative
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--navy);
+      border: 1px solid rgba(201, 162, 39, .25);
+      border-top: 3px solid var(--gold);
+      border-radius: 0 0 8px 8px;
+      min-width: 280px;
+      padding: 10px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: .25s;
+      box-shadow: 0 16px 34px rgba(0, 0, 0, .3)
+    }
+
+    .has-dropdown:hover .dropdown,
+    .has-dropdown:focus-within .dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0)
+    }
+
+    .dropdown a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 20px;
+      color: rgba(255, 255, 255, .85);
+      font-size: .85rem;
+      text-decoration: none;
+      transition: .15s
+    }
+
+    .dropdown a:hover {
+      background: rgba(201, 162, 39, .12);
+      color: var(--gold2)
+    }
+
+    .dropdown a .material-icons {
+      font-size: 1.1rem;
+      color: var(--gold);
+      flex-shrink: 0;
+      width: 1.2rem;
+      text-align: center
+    }
+
+    .dropdown .dd-title {
+      display: block;
+      padding: 8px 20px;
+      font-size: .66rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600
+    }
+
+    .has-dropdown>a::after {
+      content: "keyboard_arrow_down";
+      font-family: 'Material Icons';
+      font-size: 1rem;
+      margin-left: 2px;
+      transition: .2s
+    }
+
+    .has-dropdown:hover>a::after {
+      transform: rotate(180deg)
+    }
+
+    @media(max-width:960px) {
+      .dropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        border: 0;
+        border-left: 2px solid var(--gold);
+        border-radius: 0;
+        min-width: 0;
+        margin: 6px 0 0 14px;
+        padding: 0;
+        box-shadow: none;
+        display: none
+      }
+
+      .has-dropdown.open .dropdown {
+        display: block
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-  <div class="container nav">
-    <a class="logo" href="index.html">VITORINO<span>ODONTOLOGIA</span></a>
-    <nav>
-      <ul class="menu" id="menu">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="code.html">A Vitorino</a></li>
-        <li class="has-dropdown">
-          <a href="servicos-empresas.html">Atendimentos</a>
-          <div class="dropdown">
-            <span class="dd-title">Atendimentos</span>
-            <a href="odontologia-domiciliar.html"><span class="material-icons">home</span>Odontologia Domiciliar</a>
-            <a href="odontologia-hospitalar.html"><span class="material-icons">local_hospital</span>Odontologia Hospitalar</a>
-            <a href="atendimento-a-beira-leito.html"><span class="material-icons">bed</span>Atendimento à Beira-Leito</a>
-            <a href="odontologia-para-home-care.html"><span class="material-icons">medical_services</span>Home Care</a>
-            <a href="odontologia-para-ilpis.html"><span class="material-icons">elderly</span>ILPIs</a>
-            <a href="odontologia-para-pacientes-oncologicos.html"><span class="material-icons">health_and_safety</span>Pacientes Oncológicos</a>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="index.html">VITORINO<span>ODONTOLOGIA</span></a>
+      <nav>
+        <ul class="menu" id="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="code.html">A Vitorino</a></li>
+          <li class="has-dropdown">
+            <a href="servicos-empresas.html">Atendimentos</a>
+            <div class="dropdown">
+              <span class="dd-title">Atendimentos</span>
+              <a href="odontologia-domiciliar.html"><span class="material-icons">home</span>Odontologia Domiciliar</a>
+              <a href="odontologia-hospitalar.html"><span class="material-icons">local_hospital</span>Odontologia
+                Hospitalar</a>
+              <a href="atendimento-a-beira-leito.html"><span class="material-icons">bed</span>Atendimento à
+                Beira-Leito</a>
+              <a href="odontologia-para-home-care.html"><span class="material-icons">medical_services</span>Home
+                Care</a>
+              <a href="odontologia-para-ilpis.html"><span class="material-icons">elderly</span>ILPIs</a>
+              <a href="odontologia-para-pacientes-oncologicos.html"><span
+                  class="material-icons">health_and_safety</span>Pacientes Oncológicos</a>
+            </div>
+          </li>
+          <li><a href="educacao-continuada.html">Educação</a></li>
+          <li><a href="servicos-empresas.html#parcerias">Parcerias</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-gold"
+        href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20odontol%C3%B3gico."
+        target="_blank" rel="noopener">Agendar Atendimento</a>
+      <button class="burger" onclick="toggleMenu()" aria-label="Abrir menu"><span
+          class="material-icons">menu</span></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Odontologia Domiciliar e Hospitalar · Brasília, DF e Entorno (GO)</span>
+      <h1>Onde o paciente está, o cuidado precisa <span>chegar</span>.</h1>
+      <p>Atendimento odontológico domiciliar, hospitalar e institucional, com olhar especializado para pacientes que
+        precisam de um cuidado individualizado e humanizado.</p>
+      <div class="btns">
+        <a class="btn btn-gold"
+          href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20odontol%C3%B3gico."
+          target="_blank" rel="noopener">Agendar Atendimento</a>
+        <a class="btn btn-outline" href="code.html">Conhecer a Vitorino</a>
+      </div>
+      <div class="trust">
+        <span><i class="material-icons">home</i>Domiciliar</span>
+        <span><i class="material-icons">local_hospital</i>Hospitalar</span>
+        <span><i class="material-icons">bed</i>À beira-leito</span>
+        <span><i class="material-icons">medical_services</i>Home Care</span>
+        <span><i class="material-icons">elderly</i>ILPIs</span>
+        <span><i class="material-icons">health_and_safety</i>Oncológicos</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Nossa Odontologia</span>
+        <h2>Odontologia além do consultório</h2>
+        <p>A Vitorino Odontologia nasceu com o propósito de levar o cuidado odontológico até pacientes que, por
+          diferentes condições clínicas ou limitações, não conseguem acessar a odontologia convencional.</p>
+      </div>
+      <div class="grid g3">
+        <div class="card">
+          <div class="icon"><span class="material-icons">home</span></div>
+          <h3>Atendimento domiciliar</h3>
+          <p>Cuidado completo na residência do paciente, com equipamentos portáteis e protocolos seguros.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><span class="material-icons">local_hospital</span></div>
+          <h3>Atendimento hospitalar</h3>
+          <p>Atuação integrada em enfermarias e UTIs, com foco na prevenção de infecções sistêmicas.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><span class="material-icons">bed</span></div>
+          <h3>À beira-leito</h3>
+          <p>Procedimentos no leito de internação ou no domicílio, adaptados à condição clínica do paciente.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><span class="material-icons">medical_services</span></div>
+          <h3>Home Care</h3>
+          <p>Assistência odontológica integrada ao plano de cuidado das empresas de home care.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><span class="material-icons">elderly</span></div>
+          <h3>Instituições de longa permanência</h3>
+          <p>Prevenção, acompanhamento e manutenção da saúde bucal de residentes de ILPIs.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><span class="material-icons">health_and_safety</span></div>
+          <h3>Pacientes oncológicos</h3>
+          <p>Atuação odontológica integrada ao cuidado multiprofissional em oncologia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Nossos Atendimentos</span>
+        <h2>Especialidades focadas no cuidado</h2>
+        <p>Soluções odontológicas completas, adaptadas às necessidades de cada paciente, com segurança e conforto.</p>
+      </div>
+      <div class="grid g3">
+        <div class="card">
+          <div class="icon"><span class="material-icons">dentistry</span></div>
+          <h3>Periodontia</h3>
+          <p>Foco na saúde das gengivas e tecidos de suporte dos dentes. Tratamento especializado para doenças
+            periodontais e suporte seguro para implantes.</p><a class="btn btn-navy" style="margin-top:16px"
+            href="servicos-empresas.html">Saiba mais</a>
+        </div>
+        <div class="card">
+          <div class="icon"><span class="material-icons">local_hospital</span></div>
+          <h3>Odontologia Hospitalar</h3>
+          <p>Atendimento especializado para pacientes sistemicamente comprometidos em ambiente hospitalar ou de UTI,
+            garantindo total segurança.</p><a class="btn btn-navy" style="margin-top:16px"
+            href="odontologia-hospitalar.html">Saiba mais</a>
+        </div>
+        <div class="card">
+          <div class="icon"><span class="material-icons">medical_services</span></div>
+          <h3>Odontologia Domiciliar</h3>
+          <p>Levamos cuidado odontológico profissional até você. Ideal para pacientes com restrição de mobilidade,
+            idosos ou necessidades especiais.</p><a class="btn btn-navy" style="margin-top:16px"
+            href="odontologia-domiciliar.html">Saiba mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Para quem cuidamos</span>
+        <h2>Um olhar especializado para cada necessidade</h2>
+        <p>Atendemos pacientes que, por condição clínica ou limitação, precisam de odontologia fora do modelo
+          tradicional de consultório.</p>
+      </div>
+      <div class="grid g3">
+        <div class="card">
+          <div class="icon"><span class="material-icons">bed</span></div>
+          <h3>Pacientes acamados</h3>
+          <p>Atendimento odontológico no ambiente em que o paciente está.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><span class="material-icons">accessibility_new</span></div>
+          <h3>Mobilidade reduzida</h3>
+          <p>Cuidado adaptado às necessidades individuais de cada paciente.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><span class="material-icons">local_hospital</span></div>
+          <h3>Pacientes hospitalizados</h3>
+          <p>Atuação integrada à equipe multiprofissional do hospital.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><span class="material-icons">elderly</span></div>
+          <h3>Idosos institucionalizados</h3>
+          <p>Prevenção, acompanhamento e manutenção da saúde bucal.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><span class="material-icons">medical_services</span></div>
+          <h3>Pacientes em Home Care</h3>
+          <p>Assistência odontológica integrada ao plano de cuidado.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><span class="material-icons">health_and_safety</span></div>
+          <h3>Pacientes oncológicos</h3>
+          <p>Atuação odontológica integrada ao cuidado multiprofissional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <div class="grid g2" style="align-items:center">
+        <div>
+          <span class="eyebrow">Cuidado Integrado</span>
+          <h2 style="font-size:clamp(1.7rem,3.4vw,2.4rem);margin:10px 0 14px">A boca também faz parte do cuidado.</h2>
+          <p style="color:var(--muted)">A atuação odontológica pode estar integrada à rotina de médicos, enfermagem,
+            fisioterapia, fonoaudiologia, nutrição, cuidadores e familiares. Essa integração previne complicações
+            sistêmicas e melhora a evolução clínica do paciente.</p>
+        </div>
+        <div class="grid g3" style="gap:14px">
+          <div class="card card-dark">
+            <div class="icon"><span class="material-icons">medical_services</span></div>
+            <h3>Médicos</h3>
+            <p>Triagem e eliminação de focos infecciosos bucais.</p>
           </div>
-        </li>
-        <li><a href="educacao-continuada.html">Educação</a></li>
-        <li><a href="servicos-empresas.html#parcerias">Parcerias</a></li>
-        <li><a href="index.html#contato">Contato</a></li>
-      </ul>
-    </nav>
-    <a class="btn btn-gold" href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20odontol%C3%B3gico." target="_blank" rel="noopener">Agendar Atendimento</a>
-    <button class="burger" onclick="toggleMenu()" aria-label="Abrir menu"><span class="material-icons">menu</span></button>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container">
-    <span class="eyebrow">Odontologia Especializada · Brasília, DF</span>
-    <h1>Cuidado odontológico onde ele é <span>necessário</span>.</h1>
-    <p>Atendimento odontológico domiciliar, hospitalar e institucional, com olhar especializado para pacientes que precisam de um cuidado individualizado e humanizado.</p>
-    <div class="btns">
-      <a class="btn btn-gold" href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20odontol%C3%B3gico." target="_blank" rel="noopener">Agendar Atendimento</a>
-      <a class="btn btn-outline" href="code.html">Conhecer a Vitorino</a>
-    </div>
-    <div class="trust">
-      <span><i class="material-icons">home</i>Domiciliar</span>
-      <span><i class="material-icons">local_hospital</i>Hospitalar</span>
-      <span><i class="material-icons">bed</i>À beira-leito</span>
-      <span><i class="material-icons">medical_services</i>Home Care</span>
-      <span><i class="material-icons">elderly</i>ILPIs</span>
-      <span><i class="material-icons">health_and_safety</i>Oncológicos</span>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="sec-head">
-      <span class="eyebrow">Nossa Odontologia</span>
-      <h2>Odontologia além do consultório</h2>
-      <p>A Vitorino Odontologia nasceu com o propósito de levar o cuidado odontológico até pacientes que, por diferentes condições clínicas ou limitações, não conseguem acessar a odontologia convencional.</p>
-    </div>
-    <div class="grid g3">
-      <div class="card"><div class="icon"><span class="material-icons">home</span></div><h3>Atendimento domiciliar</h3><p>Cuidado completo na residência do paciente, com equipamentos portáteis e protocolos seguros.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">local_hospital</span></div><h3>Atendimento hospitalar</h3><p>Atuação integrada em enfermarias e UTIs, com foco na prevenção de infecções sistêmicas.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">bed</span></div><h3>À beira-leito</h3><p>Procedimentos no leito de internação ou no domicílio, adaptados à condição clínica do paciente.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">medical_services</span></div><h3>Home Care</h3><p>Assistência odontológica integrada ao plano de cuidado das empresas de home care.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">elderly</span></div><h3>Instituições de longa permanência</h3><p>Prevenção, acompanhamento e manutenção da saúde bucal de residentes de ILPIs.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">health_and_safety</span></div><h3>Pacientes oncológicos</h3><p>Atuação odontológica integrada ao cuidado multiprofissional em oncologia.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="container">
-    <div class="sec-head">
-      <span class="eyebrow">Nossos Atendimentos</span>
-      <h2>Especialidades focadas no cuidado</h2>
-      <p>Soluções odontológicas completas, adaptadas às necessidades de cada paciente, com segurança e conforto.</p>
-    </div>
-    <div class="grid g3">
-      <div class="card"><div class="icon"><span class="material-icons">dentistry</span></div><h3>Periodontia</h3><p>Foco na saúde das gengivas e tecidos de suporte dos dentes. Tratamento especializado para doenças periodontais e suporte seguro para implantes.</p><a class="btn btn-navy" style="margin-top:16px" href="servicos-empresas.html">Saiba mais</a></div>
-      <div class="card"><div class="icon"><span class="material-icons">local_hospital</span></div><h3>Odontologia Hospitalar</h3><p>Atendimento especializado para pacientes sistemicamente comprometidos em ambiente hospitalar ou de UTI, garantindo total segurança.</p><a class="btn btn-navy" style="margin-top:16px" href="odontologia-hospitalar.html">Saiba mais</a></div>
-      <div class="card"><div class="icon"><span class="material-icons">medical_services</span></div><h3>Odontologia Domiciliar</h3><p>Levamos cuidado odontológico profissional até você. Ideal para pacientes com restrição de mobilidade, idosos ou necessidades especiais.</p><a class="btn btn-navy" style="margin-top:16px" href="odontologia-domiciliar.html">Saiba mais</a></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="sec-head">
-      <span class="eyebrow">Para quem cuidamos</span>
-      <h2>Um olhar especializado para cada necessidade</h2>
-      <p>Atendemos pacientes que, por condição clínica ou limitação, precisam de odontologia fora do modelo tradicional de consultório.</p>
-    </div>
-    <div class="grid g3">
-      <div class="card"><div class="icon"><span class="material-icons">bed</span></div><h3>Pacientes acamados</h3><p>Atendimento odontológico no ambiente em que o paciente está.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">accessibility_new</span></div><h3>Mobilidade reduzida</h3><p>Cuidado adaptado às necessidades individuais de cada paciente.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">local_hospital</span></div><h3>Pacientes hospitalizados</h3><p>Atuação integrada à equipe multiprofissional do hospital.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">elderly</span></div><h3>Idosos institucionalizados</h3><p>Prevenção, acompanhamento e manutenção da saúde bucal.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">medical_services</span></div><h3>Pacientes em Home Care</h3><p>Assistência odontológica integrada ao plano de cuidado.</p></div>
-      <div class="card"><div class="icon"><span class="material-icons">health_and_safety</span></div><h3>Pacientes oncológicos</h3><p>Atuação odontológica integrada ao cuidado multiprofissional.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="container">
-    <div class="grid g2" style="align-items:center">
-      <div>
-        <span class="eyebrow">Cuidado Integrado</span>
-        <h2 style="font-size:clamp(1.7rem,3.4vw,2.4rem);margin:10px 0 14px">A boca também faz parte do cuidado.</h2>
-        <p style="color:var(--muted)">A atuação odontológica pode estar integrada à rotina de médicos, enfermagem, fisioterapia, fonoaudiologia, nutrição, cuidadores e familiares. Essa integração previne complicações sistêmicas e melhora a evolução clínica do paciente.</p>
-      </div>
-      <div class="grid g3" style="gap:14px">
-        <div class="card card-dark"><div class="icon"><span class="material-icons">medical_services</span></div><h3>Médicos</h3><p>Triagem e eliminação de focos infecciosos bucais.</p></div>
-        <div class="card card-dark"><div class="icon"><span class="material-icons">groups</span></div><h3>Enfermagem</h3><p>Protocolos de higiene bucal em pacientes críticos.</p></div>
-        <div class="card card-dark"><div class="icon"><span class="material-icons">accessibility_new</span></div><h3>Fisioterapia</h3><p>Atuação conjunta na prevenção de pneumonias.</p></div>
-        <div class="card card-dark"><div class="icon"><span class="material-icons">psychology</span></div><h3>Fonoaudiologia</h3><p>Cuidado coordenado com a saúde oral e deglutição.</p></div>
-        <div class="card card-dark"><div class="icon"><span class="material-icons">restaurant</span></div><h3>Nutrição</h3><p>Saúde bucal como parte da condição nutricional.</p></div>
-        <div class="card card-dark"><div class="icon"><span class="material-icons">person</span></div><h3>Cuidadores e familiares</h3><p>Orientação e capacitação para o dia a dia do cuidado.</p></div>
+          <div class="card card-dark">
+            <div class="icon"><span class="material-icons">groups</span></div>
+            <h3>Enfermagem</h3>
+            <p>Protocolos de higiene bucal em pacientes críticos.</p>
+          </div>
+          <div class="card card-dark">
+            <div class="icon"><span class="material-icons">accessibility_new</span></div>
+            <h3>Fisioterapia</h3>
+            <p>Atuação conjunta na prevenção de pneumonias.</p>
+          </div>
+          <div class="card card-dark">
+            <div class="icon"><span class="material-icons">psychology</span></div>
+            <h3>Fonoaudiologia</h3>
+            <p>Cuidado coordenado com a saúde oral e deglutição.</p>
+          </div>
+          <div class="card card-dark">
+            <div class="icon"><span class="material-icons">restaurant</span></div>
+            <h3>Nutrição</h3>
+            <p>Saúde bucal como parte da condição nutricional.</p>
+          </div>
+          <div class="card card-dark">
+            <div class="icon"><span class="material-icons">person</span></div>
+            <h3>Cuidadores e familiares</h3>
+            <p>Orientação e capacitação para o dia a dia do cuidado.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section>
-  <div class="container">
-    <div class="grid g2" style="align-items:center">
-      <div>
-        <span class="eyebrow">Quem está por trás da Vitorino</span>
-        <h2 style="font-size:clamp(1.7rem,3.4vw,2.4rem);margin:10px 0 14px">Dra. Danielly Vitorino</h2>
-        <p style="color:var(--muted)"><strong style="color:var(--ink)">Cirurgiã-Dentista e CEO da Vitorino Odontologia.</strong> Atua na assistência odontológica de pacientes em contextos domiciliar, hospitalar e institucional, com foco em cuidado individualizado, integrado e humanizado.</p>
-        <a class="btn btn-navy" style="margin-top:22px" href="code.html">Conheça Nossa História</a>
-      </div>
-      <div class="card" style="text-align:center;padding:40px">
-        <div class="icon" style="margin:0 auto 16px"><span class="material-icons">verified</span></div>
-        <h3>Especialista em alta complexidade</h3>
-        <p>Formação em Periodontia e Odontologia Hospitalar, com treinamento avançado em ambiente de UTI e planos de tratamento estritamente personalizados.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="stats">
-  <div class="container">
-    <div class="grid g4">
-      <div class="stat"><b>[+X]</b><span>Pacientes atendidos</span></div>
-      <div class="stat"><b>[+X]</b><span>Instituições parceiras</span></div>
-      <div class="stat"><b>[+X]</b><span>Anos de experiência</span></div>
-      <div class="stat"><b>[+X]</b><span>Profissionais capacitados</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="container">
-    <div class="sec-head">
-      <span class="eyebrow">Depoimentos</span>
-      <h2>O que dizem nossos pacientes</h2>
-      <p>A satisfação e o bem-estar de quem confia no nosso trabalho em Periodontia, Odontologia Hospitalar e Domiciliar.</p>
-    </div>
-    <div class="grid g3">
-      <div class="card t-card">
-        <div class="icon"><span class="material-icons">format_quote</span></div>
-        <p>"O atendimento domiciliar para minha mãe foi impecável. A Dra. Danielly foi extremamente atenciosa, paciente e demonstrou um profissionalismo sem igual no tratamento periodôntico. Um alívio para toda a família."</p>
-        <footer><b>Mariana Silva</b>Filha da paciente Sra. Augusta (Atendimento Domiciliar)</footer>
-      </div>
-      <div class="card t-card">
-        <div class="icon"><span class="material-icons">format_quote</span></div>
-        <p>"Como paciente cardíaco, precisei de acompanhamento odontológico hospitalar antes de uma cirurgia. O cuidado preventivo e a dedicação da Dra. Danielly na UTI me deram total segurança e evitaram infecções severas."</p>
-        <footer><b>Carlos Alberto Souza</b>Paciente de Odontologia Hospitalar</footer>
-      </div>
-      <div class="card t-card">
-        <div class="icon"><span class="material-icons">format_quote</span></div>
-        <p>"Excelente profissional! Sempre tive muito medo de tratamentos de gengiva, mas a abordagem humanizada e a paciência da Dra. Danielly mudaram completamente minha experiência de ir ao dentista."</p>
-        <footer><b>Beatriz Pinheiro</b>Paciente de Periodontia</footer>
+  <section>
+    <div class="container">
+      <div class="grid g2" style="align-items:center">
+        <div>
+          <span class="eyebrow">Quem está por trás da Vitorino</span>
+          <h2 style="font-size:clamp(1.7rem,3.4vw,2.4rem);margin:10px 0 14px">Dra. Danielly Vitorino</h2>
+          <p style="color:var(--muted)"><strong style="color:var(--ink)">Cirurgiã-Dentista e CEO da Vitorino
+              Odontologia.</strong> Atua na assistência odontológica de pacientes em contextos domiciliar, hospitalar e
+            institucional, com foco em cuidado individualizado, integrado e humanizado.</p>
+          <a class="btn btn-navy" style="margin-top:22px" href="code.html">Conheça Nossa História</a>
+        </div>
+        <div class="card" style="text-align:center;padding:40px">
+          <div class="icon" style="margin:0 auto 16px"><span class="material-icons">verified</span></div>
+          <h3>Especialista em alta complexidade</h3>
+          <p>Formação em Periodontia e Odontologia Hospitalar, com treinamento avançado em ambiente de UTI e planos de
+            tratamento estritamente personalizados.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section>
-  <div class="container">
-    <div class="sec-head">
-      <span class="eyebrow">Perguntas Frequentes</span>
-      <h2>Dúvidas Comuns</h2>
-      <p>Esclareça suas principais dúvidas sobre Periodontia, Odontologia Hospitalar e Domiciliar.</p>
-    </div>
-    <details class="faq-item"><summary>O que faz a Odontologia Hospitalar e quem precisa dela?<i class="material-icons">expand_more</i></summary><p>A Odontologia Hospitalar foca no cuidado da saúde bucal de pacientes internados, em UTI ou com condições sistêmicas complexas (como cardiopatias, diabetes descompensado ou pacientes oncológicos). O objetivo é prevenir infecções graves de origem bucal que podem comprometer a saúde geral do paciente e prolongar o tempo de internação.</p></details>
-    <details class="faq-item"><summary>Como funciona o atendimento odontológico domiciliar (Home Care)?<i class="material-icons">expand_more</i></summary><p>O atendimento odontológico home care é realizado no conforto da residência do paciente. Levamos equipamentos odontológicos portáteis modernos (consultório portátil com compressor, sugador e fotopolimerizador) que permitem realizar restaurações, extrações, limpezas, raspagens periodontais e tratamentos de dor de forma segura e humanizada, ideal para idosos, pessoas acamadas ou com mobilidade reduzida.</p></details>
-    <details class="faq-item"><summary>Qual a diferença entre a limpeza comum e o tratamento periodontal?<i class="material-icons">expand_more</i></summary><p>A profilaxia comum (limpeza) é preventiva, focada na remoção de placa bacteriana e manchas superficiais acima da linha da gengiva. Já o tratamento periodontal envolve a raspagem e o alisamento radicular (abaixo da linha da gengiva), com o objetivo de remover o tártaro acumulado nas raízes dos dentes, tratar infecções ativas da gengiva (gengivite e periodontite) e conter a perda óssea.</p></details>
-    <details class="faq-item"><summary>Quais as formas de pagamento e como agendar?<i class="material-icons">expand_more</i></summary><p>Você pode agendar sua consulta diretamente por WhatsApp clicando em nossos botões de agendamento ou preenchendo o formulário de contato. Aceitamos cartões de crédito/débito, PIX e oferecemos documentação completa para solicitação de reembolso junto ao seu plano de saúde/odontológico (especialmente para Odontologia Hospitalar).</p></details>
-  </div>
-</section>
-
-<section class="alt" id="contato">
-  <div class="container">
-    <div class="contact-grid">
-      <div>
-        <span class="eyebrow">Canais de Atendimento</span>
-        <h2 style="font-size:clamp(1.7rem,3.4vw,2.4rem);margin:10px 0 20px">Entre em Contato</h2>
-        <p style="color:var(--muted);margin-bottom:26px">Estamos prontos para atender você com o cuidado e a atenção que sua saúde merece. Solicite um agendamento ou tire suas dúvidas diretamente conosco.</p>
-        <div class="contact-item"><div class="icon"><span class="material-icons">call</span></div><div><b>Telefone / WhatsApp</b><a href="https://wa.me/556182559552" target="_blank" rel="noopener">(61) 8255-9552</a></div></div>
-        <div class="contact-item"><div class="icon"><span class="material-icons">mail</span></div><div><b>E-mail</b><a href="mailto:contato@daniellyvitorino.com.br">contato@daniellyvitorino.com.br</a></div></div>
-        <div class="contact-item"><div class="icon"><span class="material-icons">location_on</span></div><div><b>Área de Cobertura</b><span>Brasília, DF e entorno (atendimento hospitalar e domiciliar)</span></div></div>
-      </div>
-      <div>
-        <h3 style="margin-bottom:18px">Pré-Agendamento de Consulta</h3>
-        <form id="form-wa">
-          <div class="field"><label for="nome">Nome Completo *</label><input id="nome" type="text" required></div>
-          <div class="field"><label for="tel">Telefone / WhatsApp *</label><input id="tel" type="tel" required></div>
-          <div class="field"><label for="servico">Serviço de Interesse</label><select id="servico"><option>Periodontia</option><option>Odontologia Hospitalar</option><option>Odontologia Domiciliar</option><option>Home Care</option><option>ILPIs</option><option>Pacientes oncológicos</option><option>Educação e Capacitação</option><option>Parceria institucional</option><option>Outro</option></select></div>
-          <div class="field"><label for="msg">Mensagem ou Observações (Opcional)</label><textarea id="msg" rows="4"></textarea></div>
-          <button class="btn btn-gold" type="submit">Enviar Solicitação pelo WhatsApp <span class="material-icons">arrow_forward</span></button>
-        </form>
+  <section class="stats">
+    <div class="container">
+      <div class="grid g4">
+        <div class="stat"><b>[+X]</b><span>Pacientes atendidos</span></div>
+        <div class="stat"><b>[+X]</b><span>Instituições parceiras</span></div>
+        <div class="stat"><b>[+X]</b><span>Anos de experiência</span></div>
+        <div class="stat"><b>[+X]</b><span>Profissionais capacitados</span></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="cta">
-  <div class="container">
-    <span class="eyebrow">Atendimento</span>
-    <h2>Seu paciente precisa de cuidado odontológico?</h2>
-    <p>A Vitorino pode fazer parte desse cuidado. Atendimento domiciliar, hospitalar e institucional em Brasília e entorno.</p>
-    <a class="btn btn-gold" href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Vitorino." target="_blank" rel="noopener">Fale com a Vitorino</a>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <div class="f-grid">
-      <div class="f-brand"><b>VITORINO<span>ODONTOLOGIA</span></b><p>Odontologia especializada em cuidado domiciliar, hospitalar e institucional.</p></div>
-      <div><h4>Atendimentos</h4><a href="odontologia-domiciliar.html">Domiciliar</a><a href="odontologia-hospitalar.html">Hospitalar</a><a href="atendimento-a-beira-leito.html">À Beira-Leito</a><a href="odontologia-para-home-care.html">Home Care</a><a href="odontologia-para-ilpis.html">ILPIs</a><a href="odontologia-para-pacientes-oncologicos.html">Pacientes Oncológicos</a></div>
-      <div><h4>Institucional</h4><a href="code.html">Sobre a Vitorino</a><a href="code.html#equipe">Nossa equipe</a><a href="educacao-continuada.html">Educação</a><a href="servicos-empresas.html#parcerias">Parcerias</a><a href="index.html#contato">Contato</a></div>
-      <div><h4>Contato</h4><a href="https://wa.me/556182559552" target="_blank" rel="noopener">WhatsApp</a><a href="#">Instagram</a><a href="mailto:contato@daniellyvitorino.com.br">E-mail</a><span>Brasília, DF e entorno</span></div>
+  <section class="alt">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Depoimentos</span>
+        <h2>O que dizem nossos pacientes</h2>
+        <p>A satisfação e o bem-estar de quem confia no nosso trabalho em Periodontia, Odontologia Hospitalar e
+          Domiciliar.</p>
+      </div>
+      <div class="grid g3">
+        <div class="card t-card">
+          <div class="icon"><span class="material-icons">format_quote</span></div>
+          <p>"O atendimento domiciliar para minha mãe foi impecável. A Dra. Danielly foi extremamente atenciosa,
+            paciente e demonstrou um profissionalismo sem igual no tratamento periodôntico. Um alívio para toda a
+            família."</p>
+          <footer><b>Mariana Silva</b>Filha da paciente Sra. Augusta (Atendimento Domiciliar)</footer>
+        </div>
+        <div class="card t-card">
+          <div class="icon"><span class="material-icons">format_quote</span></div>
+          <p>"Como paciente cardíaco, precisei de acompanhamento odontológico hospitalar antes de uma cirurgia. O
+            cuidado preventivo e a dedicação da Dra. Danielly na UTI me deram total segurança e evitaram infecções
+            severas."</p>
+          <footer><b>Carlos Alberto Souza</b>Paciente de Odontologia Hospitalar</footer>
+        </div>
+        <div class="card t-card">
+          <div class="icon"><span class="material-icons">format_quote</span></div>
+          <p>"Excelente profissional! Sempre tive muito medo de tratamentos de gengiva, mas a abordagem humanizada e a
+            paciência da Dra. Danielly mudaram completamente minha experiência de ir ao dentista."</p>
+          <footer><b>Beatriz Pinheiro</b>Paciente de Periodontia</footer>
+        </div>
+      </div>
     </div>
-    <div class="copy">© 2026 Vitorino Odontologia. Todos os direitos reservados.</div>
-  </div>
-</footer>
+  </section>
 
-<a class="wa" href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20odontol%C3%B3gico." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Agende seu atendimento</a>
+  <section>
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">Perguntas Frequentes</span>
+        <h2>Dúvidas Comuns</h2>
+        <p>Esclareça suas principais dúvidas sobre Periodontia, Odontologia Hospitalar e Domiciliar.</p>
+      </div>
+      <details class="faq-item">
+        <summary>O que faz a Odontologia Hospitalar e quem precisa dela?<i class="material-icons">expand_more</i>
+        </summary>
+        <p>A Odontologia Hospitalar foca no cuidado da saúde bucal de pacientes internados, em UTI ou com condições
+          sistêmicas complexas (como cardiopatias, diabetes descompensado ou pacientes oncológicos). O objetivo é
+          prevenir infecções graves de origem bucal que podem comprometer a saúde geral do paciente e prolongar o tempo
+          de internação.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Como funciona o atendimento odontológico domiciliar (Home Care)?<i
+            class="material-icons">expand_more</i></summary>
+        <p>O atendimento odontológico home care é realizado no conforto da residência do paciente. Levamos equipamentos
+          odontológicos portáteis modernos (consultório portátil com compressor, sugador e fotopolimerizador) que
+          permitem realizar restaurações, extrações, limpezas, raspagens periodontais e tratamentos de dor de forma
+          segura e humanizada, ideal para idosos, pessoas acamadas ou com mobilidade reduzida.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Qual a diferença entre a limpeza comum e o tratamento periodontal?<i
+            class="material-icons">expand_more</i></summary>
+        <p>A profilaxia comum (limpeza) é preventiva, focada na remoção de placa bacteriana e manchas superficiais acima
+          da linha da gengiva. Já o tratamento periodontal envolve a raspagem e o alisamento radicular (abaixo da linha
+          da gengiva), com o objetivo de remover o tártaro acumulado nas raízes dos dentes, tratar infecções ativas da
+          gengiva (gengivite e periodontite) e conter a perda óssea.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quais as formas de pagamento e como agendar?<i class="material-icons">expand_more</i></summary>
+        <p>Você pode agendar sua consulta diretamente por WhatsApp clicando em nossos botões de agendamento ou
+          preenchendo o formulário de contato. Aceitamos cartões de crédito/débito, PIX e oferecemos documentação
+          completa para solicitação de reembolso junto ao seu plano de saúde/odontológico (especialmente para
+          Odontologia Hospitalar).</p>
+      </details>
+    </div>
+  </section>
 
-<script>
-function toggleMenu(){
-  var m=document.getElementById('menu');
-  m.classList.toggle('open');
-  var dd=m.querySelector('.has-dropdown');
-  if(dd){dd.classList.toggle('open');}
-}
-document.getElementById('form-wa').addEventListener('submit',function(e){
-  e.preventDefault();
-  var nome=document.getElementById('nome').value;
-  var tel=document.getElementById('tel').value;
-  var servico=document.getElementById('servico').value;
-  var msg=document.getElementById('msg').value;
-  var texto='Olá! Meu nome é '+nome+' ('+tel+'). Interesse: '+servico+'. '+(msg?'Observações: '+msg:'');
-  window.open('https://wa.me/556182559552?text='+encodeURIComponent(texto),'_blank');
-});
-</script>
+  <section class="alt" id="contato">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <span class="eyebrow">Canais de Atendimento</span>
+          <h2 style="font-size:clamp(1.7rem,3.4vw,2.4rem);margin:10px 0 20px">Entre em Contato</h2>
+          <p style="color:var(--muted);margin-bottom:26px">Estamos prontos para atender você com o cuidado e a atenção
+            que sua saúde merece. Solicite um agendamento ou tire suas dúvidas diretamente conosco.</p>
+          <div class="contact-item">
+            <div class="icon"><span class="material-icons">call</span></div>
+            <div><b>Telefone / WhatsApp</b><a href="https://wa.me/556182559552" target="_blank" rel="noopener">(61)
+                8255-9552</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="icon"><span class="material-icons">mail</span></div>
+            <div><b>E-mail</b><a href="mailto:vitorinossaude@gmail.com">vitorinossaude@gmail.com</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="icon"><span class="material-icons">location_on</span></div>
+            <div><b>Área de Cobertura</b><span>Brasília, DF e entorno (atendimento hospitalar e domiciliar)</span></div>
+          </div>
+        </div>
+        <div>
+          <h3 style="margin-bottom:18px">Pré-Agendamento de Consulta</h3>
+          <form id="form-wa">
+            <div class="field"><label for="nome">Nome Completo *</label><input id="nome" type="text" required></div>
+            <div class="field"><label for="tel">Telefone / WhatsApp *</label><input id="tel" type="tel" required></div>
+            <div class="field"><label for="servico">Serviço de Interesse</label><select id="servico">
+                <option>Periodontia</option>
+                <option>Odontologia Hospitalar</option>
+                <option>Odontologia Domiciliar</option>
+                <option>Home Care</option>
+                <option>ILPIs</option>
+                <option>Pacientes oncológicos</option>
+                <option>Educação e Capacitação</option>
+                <option>Parceria institucional</option>
+                <option>Outro</option>
+              </select></div>
+            <div class="field"><label for="msg">Mensagem ou Observações (Opcional)</label><textarea id="msg"
+                rows="4"></textarea></div>
+            <button class="btn btn-gold" type="submit">Enviar Solicitação pelo WhatsApp <span
+                class="material-icons">arrow_forward</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <span class="eyebrow">Atendimento</span>
+      <h2>Seu paciente precisa de cuidado odontológico?</h2>
+      <p>A Vitorino pode fazer parte desse cuidado. Atendimento domiciliar, hospitalar e institucional em Brasília e
+        entorno.</p>
+      <a class="btn btn-gold"
+        href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Vitorino." target="_blank"
+        rel="noopener">Fale com a Vitorino</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="f-grid">
+        <div class="f-brand"><b>VITORINO<span>ODONTOLOGIA</span></b>
+          <p>Odontologia especializada em cuidado domiciliar, hospitalar e institucional.</p>
+        </div>
+        <div>
+          <h4>Atendimentos</h4><a href="odontologia-domiciliar.html">Domiciliar</a><a
+            href="odontologia-hospitalar.html">Hospitalar</a><a href="atendimento-a-beira-leito.html">À
+            Beira-Leito</a><a href="odontologia-para-home-care.html">Home Care</a><a
+            href="odontologia-para-ilpis.html">ILPIs</a><a href="odontologia-para-pacientes-oncologicos.html">Pacientes
+            Oncológicos</a>
+        </div>
+        <div>
+          <h4>Institucional</h4><a href="code.html">Sobre a Vitorino</a><a href="code.html#equipe">Nossa equipe</a><a
+            href="educacao-continuada.html">Educação</a><a href="servicos-empresas.html#parcerias">Parcerias</a><a
+            href="index.html#contato">Contato</a>
+        </div>
+        <div>
+          <h4>Contato</h4><a href="https://wa.me/556182559552" target="_blank" rel="noopener">WhatsApp</a><a
+            href="#">Instagram</a><a href="mailto:vitorinossaude@gmail.com">E-mail</a><span>Brasília, DF e
+            entorno</span>
+        </div>
+      </div>
+      <div class="copy">© 2026 Vitorino Odontologia. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+  <a class="wa"
+    href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20odontol%C3%B3gico."
+    target="_blank" rel="noopener"><svg viewBox="0 0 24 24">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>Agende seu atendimento</a>
+
+  <script>
+    function toggleMenu() {
+      var m = document.getElementById('menu');
+      m.classList.toggle('open');
+      var dd = m.querySelector('.has-dropdown');
+      if (dd) { dd.classList.toggle('open'); }
+    }
+    document.getElementById('form-wa').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var nome = document.getElementById('nome').value;
+      var tel = document.getElementById('tel').value;
+      var servico = document.getElementById('servico').value;
+      var msg = document.getElementById('msg').value;
+      var texto = 'Olá! Meu nome é ' + nome + ' (' + tel + '). Interesse: ' + servico + '. ' + (msg ? 'Observações: ' + msg : '');
+      window.open('https://wa.me/556182559552?text=' + encodeURIComponent(texto), '_blank');
+    });
+  </script>
 </body>
-</html>
 
+</html>
