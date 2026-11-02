@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato e Entrada do Novo Paciente | Vitorino Saúde &amp; Vitorino Odontologia</title>
+  <meta name="description" content="Inicie seu atendimento odontológico domiciliar, hospitalar, em Home Care ou ILPI, ou converse sobre encaminhamentos e parcerias em Brasília, DF e entorno.">
+  <link rel="icon" type="image/png" href="assets/logo-vitorino.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <div class="header-topbar">
+    <div class="container header-topbar__inner">
+      <div class="header-topbar__info">
+        <span><strong>Vitorino Saúde</strong> · Cuidado integral centrado no paciente</span>
+        <span>Atuação clínica atual: <strong>Vitorino Odontologia</strong> (Brasília, DF e entorno)</span>
+      </div>
+      <div class="header-topbar__links">
+        <a href="educacao-continuada.html">Educação e Capacitação</a>
+        <a href="https://www.instagram.com/vitorinosaude/" target="_blank" rel="noopener noreferrer">@vitorinosaude</a>
+        <a href="https://www.instagram.com/dra.hospitallar/" target="_blank" rel="noopener noreferrer">@dra.hospitallar</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" role="banner">
+    <div class="container header-main">
+      <a href="index.html" class="brand-logo" aria-label="Vitorino Saúde — Página inicial">
+        <img src="assets/logo-vitorino-saude.svg" alt="Logotipo Vitorino Saúde" width="230" height="48">
+      </a>
+
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+        <span class="menu-toggle__label">Menu</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="quem-somos.html" class="nav-link">Quem somos</a></li>
+          <li><a href="vitorino-odontologia.html" class="nav-link nav-link--odonto">Vitorino Odontologia</a></li>
+          <li><a href="parceiros.html" class="nav-link">Parceiros</a></li>
+          <li><a href="https://vitorino-odontologia.blogspot.com/" class="nav-link" target="_blank" rel="noopener noreferrer">Blog</a></li>
+          <li><a href="contato.html" class="nav-link" aria-current="page">Contato</a></li>
+        </ul>
+        <a href="#form-novo-paciente" class="btn btn--odonto btn--sm nav-cta">Sou novo paciente</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+    <section class="page-hero">
+      <div class="container">
+        <ol class="breadcrumb" aria-label="Navegação estrutural">
+          <li><a href="index.html">Início</a></li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page">Contato e Novo Paciente</li>
+        </ol>
+        <span class="area-badge area-badge--odonto">
+          <span class="area-badge__dot"></span>
+          Sou Novo Paciente · Contato e Acolhimento
+        </span>
+        <h1 class="page-hero__title">Vamos entender de que cuidado você precisa?</h1>
+        <p class="page-hero__lead">
+          Se você procura atendimento para si, para um familiar ou para alguém de quem cuida, o primeiro passo é conversar com a nossa equipe. Vamos compreender sua necessidade e orientar os próximos passos.
+        </p>
+      </div>
+    </section>
+
+    <!-- Entradas por intenção na página de contato (Seção 6.7) -->
+    <section class="intent-bar" aria-label="Selecionar tipo de atendimento">
+      <div class="container">
+        <div class="intent-grid">
+          <a href="#form-novo-paciente" class="intent-card intent-card--odonto" data-select-intent="paciente-familiar">
+            <div>
+              <span class="intent-card__eyebrow">Atendimento Odontológico</span>
+              <h2 class="intent-card__title">Busco atendimento para mim ou um familiar</h2>
+              <p class="intent-card__desc">Preencher solicitação inicial para atendimento domiciliar, hospitalar, Home Care ou ILPI.</p>
+            </div>
+            <span class="intent-card__cta">Selecionar este perfil ↓</span>
+          </a>
+
+          <a href="#form-novo-paciente" class="intent-card" data-select-intent="profissional">
+            <div>
+              <span class="intent-card__eyebrow">Integração entre Profissionais</span>
+              <h2 class="intent-card__title">Sou profissional de saúde</h2>
+              <p class="intent-card__desc">Encaminhar um paciente ou conversar sobre cuidado compartilhado.</p>
+            </div>
+            <span class="intent-card__cta">Selecionar este perfil ↓</span>
+          </a>
+
+          <a href="#form-novo-paciente" class="intent-card" data-select-intent="instituicao">
+            <div>
+              <span class="intent-card__eyebrow">Parcerias e Capacitação</span>
+              <h2 class="intent-card__title">Represento uma instituição ou empresa</h2>
+              <p class="intent-card__desc">Conversar sobre parcerias com hospitais, ILPIs, Home Care ou empresas.</p>
+            </div>
+            <span class="intent-card__cta">Selecionar este perfil ↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Etapas e Formulário de Entrada (Seções 6.7 e 10) -->
+    <section id="novo-paciente" class="section" aria-labelledby="titulo-form-contato">
+      <div class="container">
+        <div class="journey-steps" aria-label="Etapas do atendimento">
+          <div class="step-card">
+            <span class="step-card__badge">Etapa 1</span>
+            <h2 class="step-card__title">Primeiro contato</h2>
+            <p class="card__text">Envie os dados iniciais pelo formulário ou fale diretamente pelo WhatsApp.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-card__badge">Etapa 2</span>
+            <h2 class="step-card__title">Compreensão inicial da necessidade</h2>
+            <p class="card__text">Nossa equipe escuta o contexto do paciente e esclarece dúvidas sobre o funcionamento.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-card__badge">Etapa 3</span>
+            <h2 class="step-card__title">Avaliação e planejamento</h2>
+            <p class="card__text">Realização de consulta de avaliação individual para definir o plano terapêutico adequado.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-card__badge">Etapa 4</span>
+            <h2 class="step-card__title">Orientações e acompanhamento</h2>
+            <p class="card__text">Atendimento clínico e orientações contínuas para familiares, cuidadores e equipe, conforme o caso.</p>
+          </div>
+        </div>
+
+        <div class="patient-form-layout">
+          <div class="form-card">
+            <h2 id="titulo-form-contato" style="font-size: 1.55rem; margin-bottom: 8px;">Formulário de primeiro contato</h2>
+            <p style="color: var(--text-muted); margin-bottom: 24px;">
+              Solicitamos apenas o essencial para iniciar a conversa. Ao clicar em <strong>Continuar no WhatsApp</strong>, sua mensagem será preparada para envio.
+            </p>
+
+            <form id="form-novo-paciente" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="contato-nome" class="form-label">Nome de quem entra em contato *</label>
+                  <input type="text" id="contato-nome" name="nome" class="form-control" required autocomplete="name" placeholder="Seu nome completo">
+                </div>
+
+                <div class="form-group">
+                  <label for="contato-telefone" class="form-label">Telefone / WhatsApp *</label>
+                  <input type="tel" id="contato-telefone" name="telefone" class="form-control" required autocomplete="tel" placeholder="(61) 99999-9999">
+                </div>
+
+                <div class="form-group">
+                  <label for="contato-relacao" class="form-label">
+                    Relação com o atendimento <span class="form-label__optional">(opcional)</span>
+                  </label>
+                  <select id="contato-relacao" name="relacao" class="form-control">
+                    <option value="">Selecione uma opção</option>
+                    <option value="Paciente">Sou o próprio paciente</option>
+                    <option value="Familiar ou cuidador">Familiar</option>
+                    <option value="Cuidador profissional">Cuidador(a)</option>
+                    <option value="Profissional de saúde">Profissional de saúde</option>
+                    <option value="Instituição ou empresa">Representante de instituição ou empresa</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="contato-regiao" class="form-label">
+                    Cidade ou região <span class="form-label__optional">(opcional)</span>
+                  </label>
+                  <input type="text" id="contato-regiao" name="regiao" class="form-control" placeholder="Ex.: Brasília, Águas Claras, Taguatinga">
+                </div>
+
+                <div class="form-group form-group--full">
+                  <label for="contato-interesse" class="form-label">
+                    Interesse <span class="form-label__optional">(opcional)</span>
+                  </label>
+                  <select id="contato-interesse" name="interesse" class="form-control">
+                    <option value="">Selecione uma opção</option>
+                    <option value="Atendimento odontológico">Atendimento odontológico</option>
+                    <option value="Orientação inicial">Orientação inicial</option>
+                    <option value="Encaminhamento profissional">Encaminhamento profissional</option>
+                    <option value="Parceria institucional ou empresarial">Parceria institucional ou empresarial</option>
+                    <option value="Educação ou capacitação">Educação / capacitação</option>
+                  </select>
+                </div>
+
+                <div class="form-group form-group--full">
+                  <label for="contato-mensagem" class="form-label">
+                    Mensagem opcional <span class="form-label__optional">(opcional)</span>
+                  </label>
+                  <textarea id="contato-mensagem" name="mensagem" rows="3" class="form-control" placeholder="Descreva brevemente sua necessidade..."></textarea>
+                  <span class="form-help">
+                    <strong>Orientação importante:</strong> evite o envio de exames ou informações clínicas detalhadas nesta etapa inicial.
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-disclaimer" role="note">
+                <strong>Aviso:</strong> os dados preenchidos serão encaminhados pelo WhatsApp. <strong>A solicitação de contato não confirma o agendamento.</strong> A equipe orientará os próximos passos. Consulte nossa <a href="politica-privacidade.html">Política de Privacidade</a>.
+              </div>
+
+              <div style="margin-top: 22px;">
+                <button type="submit" class="btn btn--odonto">
+                  Continuar no WhatsApp
+                </button>
+              </div>
+
+              <div id="form-feedback" class="form-feedback" role="status" aria-live="polite">
+                <span aria-hidden="true">✔</span>
+                <div>
+                  <strong>Dados prontos para envio no WhatsApp.</strong> Se a nova aba não abrir automaticamente, clique diretamente em <a href="https://wa.me/556182559552" target="_blank" rel="noopener noreferrer">(61) 8255-9552</a>.
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div style="display: grid; gap: 20px;">
+            <div class="card card--indigo">
+              <h3 class="card__title">Canais diretos por intenção</h3>
+              <p class="card__text">
+                Se preferir, inicie a conversa no WhatsApp com uma mensagem já identificada para o seu perfil:
+              </p>
+              <div style="display: grid; gap: 10px; margin-top: 8px;">
+                <a
+                  href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20odontol%C3%B3gico."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn--odonto btn--sm"
+                  data-track-intent="atendimento"
+                >
+                  WhatsApp: Atendimento Odontológico
+                </a>
+                <a
+                  href="https://wa.me/556182559552?text=Ol%C3%A1!%20Sou%20profissional%20de%20sa%C3%BAde%20e%20gostaria%20de%20conversar%20sobre%20um%20encaminhamento."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn--saude btn--sm"
+                  data-track-intent="encaminhamento"
+                >
+                  WhatsApp: Encaminhamento Profissional
+                </a>
+                <a
+                  href="https://wa.me/556182559552?text=Ol%C3%A1!%20Represento%20uma%20institui%C3%A7%C3%A3o%20ou%20empresa%20e%20gostaria%20de%20conversar%20sobre%20parceria."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn--primary btn--sm"
+                  data-track-intent="parceria"
+                >
+                  WhatsApp: Parceria Institucional
+                </a>
+              </div>
+              <hr style="border: 0; border-top: 1px solid rgba(48, 53, 143, 0.12); margin: 14px 0;">
+              <p class="card__text">
+                <strong>Telefone / WhatsApp:</strong> (61) 8255-9552<br>
+                <strong>E-mail:</strong> <a href="mailto:vitorinossaude@gmail.com">vitorinossaude@gmail.com</a><br>
+                <strong>Cobertura:</strong> Brasília, DF e entorno
+              </p>
+            </div>
+
+            <div class="card card--saude">
+              <span class="area-badge area-badge--note">Coworking Saturno</span>
+              <h3 class="card__title" style="font-size: 1.15rem;">Espaço de apoio e reuniões</h3>
+              <p class="card__text">
+                A Vitorino conta com um espaço de apoio e reuniões no coworking Saturno, onde também realiza atendimento clínico destinado às empresas integrantes do coworking. Consulte disponibilidade e condições de agendamento.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom: 16px;">
+            <img src="assets/logo-vitorino-saude-light.svg" alt="Vitorino Saúde" width="220" height="46">
+          </a>
+          <p style="color: var(--text-on-dark-muted); font-size: 0.95rem; margin-bottom: 14px;">
+            Um propósito de cuidado integral, centrado em cada paciente. Atuação assistencial atual pela <strong>Vitorino Odontologia</strong>.
+          </p>
+          <p style="color: var(--bg-beige); font-size: 0.92rem; font-weight: 600;">
+            Responsável Técnica e Fundadora:<br>
+            Dra. Danielly Vitorino — Dra Hospital<span class="lar-highlight">LAR</span><br>
+            CRO-DF 14.465
+          </p>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Institucional</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Início (Vitorino Saúde)</a></li>
+            <li><a href="quem-somos.html">Quem somos e Trajetória</a></li>
+            <li><a href="parceiros.html">Parceiros e Encaminhamentos</a></li>
+            <li><a href="educacao-continuada.html">Educação e Capacitação</a></li>
+            <li><a href="https://vitorino-odontologia.blogspot.com/" target="_blank" rel="noopener noreferrer">Blog Vitorino ↗</a></li>
+            <li><a href="https://daniellyvitorino.wperfil.com.br/" target="_blank" rel="noopener noreferrer">Livro: As Coras (Capítulo) ↗</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Vitorino Odontologia</h3>
+          <ul class="footer-links">
+            <li><a href="vitorino-odontologia.html">Visão geral dos atendimentos</a></li>
+            <li><a href="odontologia-domiciliar.html">Odontologia Domiciliar</a></li>
+            <li><a href="odontologia-hospitalar.html">Odontologia Hospitalar</a></li>
+            <li><a href="atendimento-a-beira-leito.html">Atendimento à Beira-Leito</a></li>
+            <li><a href="odontologia-para-home-care.html">Odontologia para Home Care</a></li>
+            <li><a href="odontologia-para-ilpis.html">Odontologia para ILPIs</a></li>
+            <li><a href="odontologia-para-pacientes-oncologicos.html">Pacientes Oncológicos</a></li>
+            <li><a href="servicos-empresas.html">Serviços para Empresas</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Contato e Canais Oficiais</h3>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20odontol%C3%B3gico." target="_blank" rel="noopener noreferrer" data-track-intent="atendimento">WhatsApp: (61) 8255-9552</a></li>
+            <li><a href="mailto:vitorinossaude@gmail.com">vitorinossaude@gmail.com</a></li>
+            <li><span>Cobertura: Brasília, DF e entorno</span></li>
+            <li style="margin-top: 8px;"><strong style="color: var(--blue-saude);">Perfis no Instagram:</strong></li>
+            <li><a href="https://www.instagram.com/vitorinosaude/" target="_blank" rel="noopener noreferrer">@vitorinosaude (Atendimentos e parcerias) ↗</a></li>
+            <li><a href="https://www.instagram.com/dra.hospitallar/" target="_blank" rel="noopener noreferrer">@dra.hospitallar (Trajetória e conteúdo profissional) ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Vitorino Saúde &amp; Vitorino Odontologia. Todos os direitos reservados.</p>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+          <a href="contato.html" style="color: var(--blue-saude);">Sou novo paciente / Contato</a>
+          <a href="politica-privacidade.html" style="color: var(--blue-saude);">Política de Privacidade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="whatsapp-dock">
+    <a
+      href="https://wa.me/556182559552?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20odontol%C3%B3gico."
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-float-btn"
+      data-track-intent="atendimento"
+      aria-label="Falar com a equipe Vitorino pelo WhatsApp"
+    >
+      <span aria-hidden="true">💬</span>
+      <span>Falar no WhatsApp</span>
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1895 @@
+/* ==========================================================================
+   VITORINO SAÚDE & VITORINO ODONTOLOGIA — DESIGN SYSTEM (CSS3)
+   Baseado no Briefing v2.2 (01/11/2026) e Manual de Onboarding Vitorino
+   ========================================================================== */
+
+:root {
+  /* Paleta Oficial (Seção 4) */
+  --indigo-primary: #30358F;
+  --indigo-dark: #1F2366;
+  --indigo-deeper: #16194D;
+  --indigo-vivid: #5C63E8;
+  --coral-odonto: #FF7668;
+  --coral-soft: #FFE5E1;
+  --blue-saude: #8EB9FC;
+  --blue-soft: #E5F0FF;
+  --bg-beige: #FFF3E7;
+  --bg-beige-alt: #F7E8D8;
+  --bg-white: #FFFFFF;
+  --lavender-support: #AAA7FF;
+  --lavender-soft: #ECEBFF;
+  --yellow-note: #FFF7C6;
+  --green-confirm: #EBFFDC;
+  --green-text: #1B4B1A;
+
+  /* Textos e Contraste (Priorizando Índigo sobre superfícies claras/coral/azul-claro) */
+  --text-primary: #1F2366;
+  --text-indigo: #30358F;
+  --text-muted: #464B82;
+  --text-on-dark: #FFF3E7;
+  --text-on-dark-muted: #D5D8FA;
+
+  /* Tipografia (Source Sans 3) */
+  --font-sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Espaçamento e Bordas */
+  --container-max: 1200px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Sombras suaves */
+  --shadow-sm: 0 4px 14px rgba(48, 53, 143, 0.07);
+  --shadow-md: 0 10px 30px rgba(48, 53, 143, 0.11);
+  --shadow-lg: 0 18px 44px rgba(31, 35, 102, 0.16);
+
+  /* Transições */
+  --transition-fast: 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-smooth: 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Reset e Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-beige);
+  color: var(--text-primary);
+  line-height: 1.65;
+  font-size: 1.0625rem;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  /* Espaço extra no final para garantir que o botão flutuante nunca cubra o rodapé */
+  padding-bottom: 72px;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--indigo-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--indigo-vivid);
+}
+
+/* Foco visível acessível para navegação por teclado (Seção 11) */
+:focus-visible {
+  outline: 3px solid var(--coral-odonto);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Utilitários de Acessibilidade */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 9999;
+  background-color: var(--yellow-note);
+  color: var(--indigo-primary);
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--indigo-primary);
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* Containers e Seções */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 84px 0;
+  position: relative;
+}
+
+.section--alt {
+  background-color: var(--bg-beige-alt);
+}
+
+.section--white {
+  background-color: var(--bg-white);
+}
+
+.section--indigo {
+  background-color: var(--indigo-primary);
+  color: var(--text-on-dark);
+}
+
+.section--saude-surface {
+  background: linear-gradient(180deg, var(--blue-soft) 0%, var(--bg-beige) 100%);
+}
+
+/* Tipografia Geral */
+h1, h2, h3, h4 {
+  color: var(--indigo-primary);
+  line-height: 1.22;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+
+.section--indigo h1,
+.section--indigo h2,
+.section--indigo h3,
+.section--indigo h4 {
+  color: var(--text-on-dark);
+}
+
+.section-header {
+  max-width: 780px;
+  margin-bottom: 48px;
+}
+
+.section-header--center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: clamp(1.85rem, 3.2vw, 2.65rem);
+  margin-bottom: 16px;
+}
+
+.section-lead {
+  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.section--indigo .section-lead {
+  color: var(--text-on-dark-muted);
+}
+
+/* Etiquetas / Badges de Identificação de Área (Sempre acompanhadas de texto: Saúde ou Odontologia) */
+.area-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+  color: var(--indigo-primary);
+}
+
+.area-badge--saude {
+  background-color: var(--blue-saude);
+  color: var(--indigo-primary);
+}
+
+.area-badge--odonto {
+  background-color: var(--coral-odonto);
+  color: var(--indigo-primary);
+}
+
+.area-badge--lavender {
+  background-color: var(--lavender-support);
+  color: var(--indigo-primary);
+}
+
+.area-badge--note {
+  background-color: var(--yellow-note);
+  color: var(--indigo-primary);
+  border: 1px solid rgba(48, 53, 143, 0.2);
+}
+
+.area-badge__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--indigo-primary);
+}
+
+/* Destaque LAR em Dra HospitalLAR (Seção 6.3) */
+.lar-highlight {
+  font-weight: 800;
+  color: var(--coral-odonto);
+  letter-spacing: 0.02em;
+}
+
+.badge-on-coral .lar-highlight,
+.area-badge--odonto .lar-highlight {
+  color: var(--indigo-deeper);
+  text-decoration: underline;
+}
+
+/* Botões (Contraste verificado conforme Seção 4) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 24px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  line-height: 1.25;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Botão Primário Institucional (Índigo com texto Bege-claro) */
+.btn--primary {
+  background-color: var(--indigo-primary);
+  color: var(--bg-beige);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--primary:hover {
+  background-color: var(--indigo-vivid);
+  color: var(--bg-white);
+}
+
+/* Botão Odontologia (Coral com texto Índigo escuro para alto contraste - Seção 4) */
+.btn--odonto {
+  background-color: var(--coral-odonto);
+  color: var(--indigo-deeper);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--odonto:hover {
+  background-color: #ff8b7f;
+  color: var(--indigo-deeper);
+}
+
+/* Botão Saúde / Acolhimento (Azul-claro com texto Índigo escuro para alto contraste - Seção 4) */
+.btn--saude {
+  background-color: var(--blue-saude);
+  color: var(--indigo-deeper);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--saude:hover {
+  background-color: #a5c7fd;
+  color: var(--indigo-deeper);
+}
+
+/* Botão Contorno em fundo claro */
+.btn--outline {
+  background-color: transparent;
+  border-color: var(--indigo-primary);
+  color: var(--indigo-primary);
+}
+
+.btn--outline:hover {
+  background-color: var(--indigo-primary);
+  color: var(--bg-beige);
+}
+
+/* Botão Contorno em fundo escuro (Índigo) */
+.btn--outline-light {
+  background-color: rgba(255, 243, 231, 0.08);
+  border-color: var(--bg-beige);
+  color: var(--bg-beige);
+}
+
+.btn--outline-light:hover {
+  background-color: var(--bg-beige);
+  color: var(--indigo-primary);
+}
+
+.btn--sm {
+  padding: 9px 18px;
+  font-size: 0.92rem;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+/* ==========================================================================
+   CABEÇALHO E NAVEGAÇÃO PRINCIPAL (Seção 5)
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 243, 231, 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(48, 53, 143, 0.12);
+  transition: box-shadow var(--transition-fast);
+}
+
+.site-header.is-scrolled {
+  box-shadow: var(--shadow-sm);
+}
+
+.header-topbar {
+  background-color: var(--indigo-deeper);
+  color: var(--bg-beige);
+  font-size: 0.84rem;
+  padding: 6px 0;
+}
+
+.header-topbar__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.header-topbar__info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.header-topbar__links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-topbar a {
+  color: var(--blue-saude);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.header-topbar a:hover {
+  color: var(--bg-beige);
+  text-decoration: underline;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 78px;
+  gap: 16px;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-logo img {
+  height: 48px;
+  width: auto;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--indigo-primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 6px 4px;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2.5px;
+  background-color: var(--indigo-vivid);
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover::after,
+.nav-link[aria-current="page"]::after {
+  width: 100%;
+}
+
+.nav-link--odonto::after {
+  background-color: var(--coral-odonto);
+}
+
+.nav-cta {
+  flex-shrink: 0;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 2px solid var(--indigo-primary);
+  color: var(--indigo-primary);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ==========================================================================
+   6.1. PRIMEIRA TELA — ABERTURA INTERATIVA COM ROLETA DE PALAVRAS (Seção 6.1)
+   ========================================================================== */
+.hero-scroll-track {
+  /* Trecho finito e curto (Seção 6.1: manter a composição temporariamente fixa enquanto a rolagem percorre a sequência; ao terminar, continua normalmente) */
+  position: relative;
+  height: 235vh;
+  background-color: var(--indigo-primary);
+  color: var(--bg-beige);
+}
+
+/* Modo estático ou preferência de movimento reduzido */
+.hero-scroll-track.is-static-mode {
+  height: auto;
+}
+
+.hero-sticky-viewport {
+  position: sticky;
+  top: 78px;
+  min-height: calc(100vh - 78px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0 48px;
+  overflow: hidden;
+  background: radial-gradient(circle at 80% 20%, rgba(92, 99, 232, 0.32) 0%, rgba(48, 53, 143, 1) 65%);
+}
+
+.hero-scroll-track.is-static-mode .hero-sticky-viewport {
+  position: relative;
+  top: 0;
+  min-height: auto;
+  padding: 64px 0;
+}
+
+/* Grafismo "Linhas da Vida" discreto no fundo */
+.hero-bg-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  z-index: 0;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 44px;
+  align-items: center;
+}
+
+/* Composição VITORINO Estático + Roleta Vertical */
+.roulette-composition {
+  background: rgba(22, 25, 77, 0.42);
+  border: 1px solid rgba(142, 185, 252, 0.24);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-lg);
+}
+
+.roulette-stage {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 230px;
+}
+
+.roulette-static-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: clamp(1.9rem, 3.8vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: var(--bg-beige);
+  line-height: 1;
+  flex-shrink: 0;
+  user-select: none;
+  position: relative;
+  padding-right: 16px;
+  border-right: 3px solid rgba(142, 185, 252, 0.4);
+}
+
+.roulette-static-brand__logo {
+  width: clamp(40px, 4.2vw, 54px);
+  height: clamp(40px, 4.2vw, 54px);
+  border-radius: 12px;
+  border: 2px solid rgba(255, 243, 231, 0.85);
+  flex-shrink: 0;
+}
+
+.roulette-window {
+  position: relative;
+  height: 220px;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  /* Máscara suave no topo e base para efeito de roleta tipográfica */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 22%, black 78%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 22%, black 78%, transparent 100%);
+}
+
+.roulette-list {
+  list-style: none;
+  width: 100%;
+  position: relative;
+  transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.roulette-item {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: clamp(1.5rem, 3vw, 2.45rem);
+  font-weight: 800;
+  line-height: 1.1;
+  transform-origin: left center;
+  transition: transform 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+  opacity: 0.22;
+  transform: scale(0.76);
+  white-space: nowrap;
+}
+
+.roulette-item.is-adjacent {
+  opacity: 0.48;
+  transform: scale(0.88);
+}
+
+.roulette-item.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Cores específicas de cada palavra na roleta (Seção 6.1) */
+.roulette-item[data-area="saude"] .roulette-word {
+  color: var(--blue-saude);
+}
+
+.roulette-item[data-area="odontologia"] .roulette-word {
+  color: var(--coral-odonto);
+}
+
+.roulette-item[data-area="fisioterapia"] .roulette-word,
+.roulette-item[data-area="fonoaudiologia"] .roulette-word,
+.roulette-item[data-area="psicologia"] .roulette-word,
+.roulette-item[data-area="estetica"] .roulette-word {
+  color: var(--lavender-support);
+}
+
+.roulette-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.roulette-item.is-active .roulette-tag {
+  opacity: 1;
+}
+
+.roulette-tag--saude {
+  background-color: var(--blue-saude);
+  color: var(--indigo-deeper);
+}
+
+.roulette-tag--atual {
+  background-color: var(--coral-odonto);
+  color: var(--indigo-deeper);
+}
+
+.roulette-tag--visao {
+  background-color: rgba(170, 167, 255, 0.2);
+  color: var(--bg-beige);
+  border: 1px solid rgba(170, 167, 255, 0.5);
+}
+
+/* Controles acessíveis por teclado, clique e toque para a roleta */
+.roulette-controls {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 243, 231, 0.14);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.roulette-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.roulette-pill {
+  background: rgba(255, 243, 231, 0.08);
+  color: var(--text-on-dark-muted);
+  border: 1px solid rgba(255, 243, 231, 0.2);
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.roulette-pill:hover {
+  background: rgba(255, 243, 231, 0.18);
+  color: var(--bg-beige);
+}
+
+.roulette-pill[aria-pressed="true"] {
+  background: var(--blue-saude);
+  color: var(--indigo-deeper);
+  border-color: var(--blue-saude);
+  font-weight: 700;
+}
+
+.roulette-pill[data-index="1"][aria-pressed="true"] {
+  background: var(--coral-odonto);
+  color: var(--indigo-deeper);
+  border-color: var(--coral-odonto);
+}
+
+.roulette-nav-btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.roulette-step-btn {
+  background: rgba(255, 243, 231, 0.1);
+  color: var(--bg-beige);
+  border: 1px solid rgba(255, 243, 231, 0.25);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.roulette-step-btn:hover {
+  background: var(--bg-beige);
+  color: var(--indigo-primary);
+}
+
+.roulette-status-bar {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--text-on-dark-muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.motion-toggle-btn {
+  background: transparent;
+  border: none;
+  color: var(--blue-saude);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+/* Coluna de Mensagem Institucional Obrigatória (Seção 6.1) */
+.hero-message-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-quote {
+  background: rgba(255, 243, 231, 0.08);
+  border-left: 4px solid var(--blue-saude);
+  padding: 20px 24px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.hero-quote__lead {
+  font-size: clamp(1.3rem, 2.2vw, 1.65rem);
+  font-weight: 800;
+  color: var(--bg-beige);
+  line-height: 1.28;
+  margin-bottom: 12px;
+}
+
+.hero-quote__body {
+  font-size: 1.02rem;
+  color: var(--text-on-dark-muted);
+  line-height: 1.6;
+}
+
+.hero-quote__body strong {
+  color: var(--bg-beige);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.hero-scroll-hint {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--blue-saude);
+  margin-top: 4px;
+}
+
+/* ==========================================================================
+   ENTRADAS POR INTENÇÃO (Logo após a apresentação inicial — Seção 6.7)
+   ========================================================================== */
+.intent-bar {
+  margin-top: -28px;
+  position: relative;
+  z-index: 10;
+  padding-bottom: 24px;
+}
+
+.intent-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.intent-card {
+  background-color: var(--bg-white);
+  border: 2px solid rgba(48, 53, 143, 0.12);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  text-decoration: none;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.intent-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--indigo-vivid);
+  box-shadow: var(--shadow-lg);
+}
+
+.intent-card--odonto:hover {
+  border-color: var(--coral-odonto);
+}
+
+.intent-card__eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--indigo-vivid);
+}
+
+.intent-card__title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--indigo-primary);
+}
+
+.intent-card__desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.intent-card__cta {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--indigo-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ==========================================================================
+   CARTÕES, PILARES E VALORES (Seção 6.2 & 8)
+   ========================================================================== */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.card {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+  border: 1px solid rgba(48, 53, 143, 0.1);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card--saude {
+  border-top: 5px solid var(--blue-saude);
+}
+
+.card--odonto {
+  border-top: 5px solid var(--coral-odonto);
+}
+
+.card--indigo {
+  border-top: 5px solid var(--indigo-primary);
+}
+
+.card__number {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: var(--blue-saude);
+  color: var(--indigo-primary);
+  font-weight: 800;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card--odonto .card__number {
+  background-color: var(--coral-odonto);
+  color: var(--indigo-deeper);
+}
+
+.card__title {
+  font-size: 1.3rem;
+  color: var(--indigo-primary);
+}
+
+.card__text {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* Missão, Visão e Valores */
+.mvv-banner {
+  margin-top: 40px;
+  background-color: var(--indigo-primary);
+  color: var(--bg-beige);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: 32px;
+  box-shadow: var(--shadow-md);
+}
+
+.mvv-item h3 {
+  color: var(--blue-saude);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.mvv-item p {
+  color: var(--bg-beige);
+  font-size: 1.05rem;
+}
+
+.values-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.value-tag {
+  background-color: rgba(255, 243, 231, 0.12);
+  color: var(--bg-beige);
+  border: 1px solid rgba(142, 185, 252, 0.35);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   6.3. ORIGEM DA MARCA, FUNDADORA E LIVRO (Seções 6.3 e 8.4)
+   ========================================================================== */
+.founder-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.founder-photo-wrap {
+  position: relative;
+}
+
+.founder-photo-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 3px solid var(--indigo-primary);
+  background-color: var(--indigo-primary);
+}
+
+.founder-photo-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.founder-photo-caption {
+  background-color: var(--indigo-deeper);
+  color: var(--bg-beige);
+  padding: 16px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.founder-photo-caption strong {
+  font-size: 1.15rem;
+  color: var(--bg-beige);
+}
+
+.founder-photo-caption .area-badge--saude {
+  background-color: var(--blue-saude);
+  color: var(--indigo-deeper);
+}
+
+.founder-photo-caption .lar-highlight {
+  color: var(--coral-odonto);
+}
+
+.founder-photo-caption__sub {
+  font-size: 0.92rem;
+  color: var(--blue-saude);
+}
+
+.founder-credentials-box {
+  margin-top: 20px;
+  background-color: var(--bg-white);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  border-left: 5px solid var(--coral-odonto);
+  box-shadow: var(--shadow-sm);
+}
+
+.founder-quote {
+  background-color: var(--bg-white);
+  border-left: 5px solid var(--indigo-primary);
+  padding: 24px 28px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 24px 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.founder-quote p + p {
+  margin-top: 12px;
+}
+
+.highlights-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.highlights-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: var(--bg-white);
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(48, 53, 143, 0.1);
+}
+
+.highlights-list__bullet {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--blue-saude);
+  color: var(--indigo-primary);
+  font-weight: 800;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Bloco do Livro (Seção 8.4) */
+.book-Feature {
+  margin-top: 48px;
+  background: linear-gradient(135deg, var(--indigo-primary) 0%, var(--indigo-deeper) 100%);
+  color: var(--bg-beige);
+  border-radius: var(--radius-lg);
+  padding: 36px 40px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 36px;
+  align-items: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.book-Feature__cover img {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.book-Feature__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 14px 0 20px;
+}
+
+.book-meta-pill {
+  background: rgba(255, 243, 231, 0.12);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  color: var(--blue-saude);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   6.4. VITORINO ODONTOLOGIA EM DETALHES (Seções 6.4 e 7)
+   ========================================================================== */
+.odonto-summary-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0 36px;
+}
+
+.odonto-pill {
+  background-color: var(--bg-white);
+  border: 2px solid var(--coral-odonto);
+  color: var(--indigo-primary);
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+}
+
+.odonto-pill:hover {
+  background-color: var(--coral-odonto);
+  color: var(--indigo-deeper);
+}
+
+.odonto-qa-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.odonto-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.service-card {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  border: 1px solid rgba(48, 53, 143, 0.12);
+  border-top: 4px solid var(--coral-odonto);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-card__tag {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: var(--coral-soft);
+  color: var(--indigo-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.service-card__title {
+  font-size: 1.25rem;
+  color: var(--indigo-primary);
+}
+
+.service-card__link {
+  font-weight: 700;
+  color: var(--indigo-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.service-card__link:hover {
+  color: var(--indigo-vivid);
+  text-decoration: underline;
+}
+
+/* Nota Amarelo Suave (Seção 4) */
+.info-note {
+  background-color: var(--yellow-note);
+  color: var(--indigo-primary);
+  border-left: 4px solid var(--indigo-primary);
+  padding: 18px 22px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.96rem;
+  margin: 24px 0;
+}
+
+.info-note strong {
+  color: var(--indigo-deeper);
+}
+
+/* ==========================================================================
+   6.5 & 10A. PARCEIROS, PROFISSIONAIS E INSTITUIÇÕES
+   ========================================================================== */
+.partners-split {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.partner-box {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  border: 2px solid rgba(48, 53, 143, 0.12);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.partner-box--referral {
+  border-top: 6px solid var(--blue-saude);
+}
+
+.partner-box--institutional {
+  border-top: 6px solid var(--indigo-primary);
+}
+
+.check-list {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 26px;
+  color: var(--text-primary);
+}
+
+.check-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--indigo-vivid);
+  font-weight: 900;
+}
+
+/* ==========================================================================
+   6.6 & 9. BLOG E CONTEÚDOS (Blogger Oficial)
+   ========================================================================== */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top: 32px;
+}
+
+.blog-card {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(48, 53, 143, 0.12);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.blog-card__banner {
+  height: 12px;
+  background: linear-gradient(90deg, var(--indigo-primary) 0%, var(--coral-odonto) 100%);
+}
+
+.blog-card__body {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.blog-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.blog-card__category {
+  background-color: var(--lavender-soft);
+  color: var(--indigo-primary);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.blog-card__title {
+  font-size: 1.22rem;
+  line-height: 1.32;
+}
+
+.blog-card__title a {
+  text-decoration: none;
+  color: var(--indigo-primary);
+}
+
+.blog-card__title a:hover {
+  color: var(--indigo-vivid);
+  text-decoration: underline;
+}
+
+.blog-card__footer {
+  padding: 0 26px 24px;
+}
+
+.categories-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+  align-items: center;
+}
+
+.category-chip {
+  background-color: var(--lavender-support);
+  color: var(--indigo-deeper);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   6.7 & 10. JORNADA DO NOVO PACIENTE E FORMULÁRIO WHATSAPP
+   ========================================================================== */
+.journey-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 32px 0 44px;
+}
+
+.step-card {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  border: 1px solid rgba(48, 53, 143, 0.14);
+  position: relative;
+}
+
+.step-card__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background-color: var(--indigo-primary);
+  color: var(--bg-beige);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.step-card__title {
+  font-size: 1.12rem;
+  margin-bottom: 8px;
+}
+
+.patient-form-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.form-card {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-md);
+  border: 2px solid rgba(48, 53, 143, 0.12);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group--full {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  font-weight: 700;
+  color: var(--indigo-primary);
+  font-size: 0.95rem;
+}
+
+.form-label__optional {
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.form-control {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid rgba(48, 53, 143, 0.28);
+  background-color: var(--bg-beige);
+  color: var(--text-primary);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.form-control:focus {
+  background-color: var(--bg-white);
+  border-color: var(--indigo-vivid);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(92, 99, 232, 0.2);
+}
+
+.form-help {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Mensagem de Confirmação Verde Suave #EBFFDC com texto escuro e ícone (Seção 4) */
+.form-feedback {
+  display: none;
+  background-color: var(--green-confirm);
+  color: var(--green-text);
+  border: 1.5px solid #86c96c;
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  margin-top: 18px;
+  font-weight: 600;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.form-feedback.is-visible {
+  display: flex;
+}
+
+.form-disclaimer {
+  margin-top: 16px;
+  padding: 14px 18px;
+  background-color: var(--yellow-note);
+  color: var(--indigo-primary);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   6.8. PERGUNTAS FREQUENTES (FAQ ACESSÍVEL)
+   ========================================================================== */
+.faq-list {
+  display: grid;
+  gap: 14px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(48, 53, 143, 0.14);
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 20px 24px;
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--indigo-primary);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--blue-soft);
+  color: var(--indigo-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+details[open] .faq-icon {
+  transform: rotate(45deg);
+  background-color: var(--coral-odonto);
+  color: var(--indigo-deeper);
+}
+
+.faq-answer {
+  padding: 0 24px 22px;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(48, 53, 143, 0.08);
+  padding-top: 16px;
+}
+
+/* ==========================================================================
+   LINHA DO TEMPO E CURRÍCULO (Seção 8)
+   ========================================================================== */
+.timeline {
+  position: relative;
+  padding-left: 32px;
+  border-left: 3px solid var(--indigo-vivid);
+  display: grid;
+  gap: 28px;
+  margin: 28px 0;
+}
+
+.timeline-item {
+  position: relative;
+  background-color: var(--bg-white);
+  padding: 24px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(48, 53, 143, 0.1);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -41px;
+  top: 26px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--coral-odonto);
+  border: 3px solid var(--bg-beige);
+}
+
+/* ==========================================================================
+   RODAPÉ INSTITUCIONAL (Seção 6.8)
+   ========================================================================== */
+.site-footer {
+  background-color: var(--indigo-deeper);
+  color: var(--bg-beige);
+  padding: 68px 0 40px;
+  border-top: 5px solid var(--indigo-vivid);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+  gap: 36px;
+  margin-bottom: 44px;
+}
+
+.footer-title {
+  color: var(--blue-saude);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: var(--text-on-dark-muted);
+  text-decoration: none;
+  font-size: 0.96rem;
+}
+
+.footer-links a:hover {
+  color: var(--bg-beige);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 243, 231, 0.14);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.88rem;
+  color: var(--text-on-dark-muted);
+}
+
+/* ==========================================================================
+   BOTÃO FLUTUANTE DE WHATSAPP (Sem cobrir conteúdo - Seções 4 e 13)
+   ========================================================================== */
+.whatsapp-dock {
+  position: fixed;
+  bottom: 16px;
+  right: 20px;
+  z-index: 900;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.whatsapp-dock.is-hidden-near-target {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px);
+}
+
+.whatsapp-float-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--indigo-primary);
+  color: var(--bg-beige);
+  border: 2px solid var(--blue-saude);
+  padding: 10px 18px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.whatsapp-float-btn:hover {
+  background-color: var(--indigo-vivid);
+  color: var(--bg-white);
+}
+
+/* ==========================================================================
+   CABEÇALHO DE PÁGINAS INTERNAS
+   ========================================================================== */
+.page-hero {
+  background: linear-gradient(135deg, var(--indigo-primary) 0%, var(--indigo-deeper) 100%);
+  color: var(--bg-beige);
+  padding: 64px 0;
+  border-bottom: 4px solid var(--blue-saude);
+}
+
+.page-hero--odonto {
+  border-bottom-color: var(--coral-odonto);
+}
+
+.page-hero__title {
+  color: var(--bg-beige);
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  margin-bottom: 16px;
+}
+
+.page-hero__lead {
+  color: var(--text-on-dark-muted);
+  font-size: 1.2rem;
+  max-width: 760px;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  color: var(--blue-saude);
+}
+
+.breadcrumb a {
+  color: var(--bg-beige);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (CELULAR E TABLET) E MOVIMENTO REDUZIDO (Seção 6.1 e 11)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .hero-grid,
+  .odonto-hero-grid,
+  .founder-layout,
+  .patient-form-layout,
+  .book-Feature {
+    grid-template-columns: 1fr;
+  }
+
+  .book-Feature {
+    text-align: left;
+  }
+
+  .book-Feature__cover {
+    max-width: 220px;
+  }
+
+  .mvv-banner,
+  .pillars-grid,
+  .odonto-services-grid,
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .journey-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 820px) {
+  .header-topbar {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 78px;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-beige);
+    border-bottom: 2px solid var(--indigo-primary);
+    padding: 24px;
+    flex-direction: column;
+    align-items: stretch;
+    box-shadow: var(--shadow-lg);
+    display: none;
+  }
+
+  .main-nav.is-open {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  /* Roleta empilhada no celular sem cortar a marca VITORINO (Seção 6.1) */
+  .roulette-stage {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    min-height: 240px;
+  }
+
+  .roulette-static-brand {
+    border-right: none;
+    border-bottom: 3px solid rgba(142, 185, 252, 0.4);
+    padding-right: 0;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+
+  .roulette-window {
+    height: 175px;
+    width: 100%;
+  }
+
+  .intent-grid,
+  .pillars-grid,
+  .mvv-banner,
+  .odonto-qa-grid,
+  .odonto-services-grid,
+  .partners-split,
+  .blog-grid,
+  .journey-steps,
+  .form-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+}
+
+/* Preferência de movimento reduzido do sistema operacional (Seção 6.1) */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-scroll-track {
+    height: auto !important;
+  }
+
+  .hero-sticky-viewport {
+    position: relative !important;
+    top: 0 !important;
+    min-height: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

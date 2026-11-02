@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 500" role="img" aria-label="Livro As Coras – Conexões Femininas — Capítulo: A menina que desenhou o hospital, por Danielly Vitorino">
+  <rect width="380" height="500" rx="20" fill="#FFF3E7"/>
+  <!-- Sombra e lombada do livro -->
+  <rect x="48" y="34" width="284" height="432" rx="12" fill="#30358F"/>
+  <rect x="48" y="34" width="22" height="432" rx="6" fill="#202466"/>
+  <path d="M70 120 C160 95, 240 155, 332 115" fill="none" stroke="#8EB9FC" stroke-width="2" stroke-opacity="0.45"/>
+  <path d="M70 360 C150 330, 250 385, 332 345" fill="none" stroke="#FF7668" stroke-width="2.5" stroke-opacity="0.65"/>
+
+  <rect x="92" y="68" width="128" height="24" rx="12" fill="#AAA7FF"/>
+  <text x="156" y="84" font-family="'Source Sans 3', sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="#30358F">OBRA COLETIVA</text>
+
+  <text x="92" y="136" font-family="'Source Sans 3', sans-serif" font-size="28" font-weight="800" fill="#FFF3E7">As Coras</text>
+  <text x="92" y="164" font-family="'Source Sans 3', sans-serif" font-size="18" font-weight="600" fill="#8EB9FC">Conexões Femininas</text>
+
+  <line x1="92" y1="190" x2="296" y2="190" stroke="#FFF3E7" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="92" y="224" font-family="'Source Sans 3', sans-serif" font-size="12" font-weight="700" letter-spacing="1.2" fill="#FF7668">CAPÍTULO DE DANIELLY VITORINO</text>
+  <text x="92" y="254" font-family="'Source Sans 3', sans-serif" font-size="20" font-weight="700" fill="#FFF3E7">“A menina que</text>
+  <text x="92" y="280" font-family="'Source Sans 3', sans-serif" font-size="20" font-weight="700" fill="#FFF3E7">desenhou o hospital”</text>
+
+  <rect x="92" y="370" width="212" height="68" rx="10" fill="#202466"/>
+  <text x="106" y="395" font-family="'Source Sans 3', sans-serif" font-size="12.5" font-weight="600" fill="#FFF3E7">Organização: Gisela Salles</text>
+  <text x="106" y="415" font-family="'Source Sans 3', sans-serif" font-size="12.5" font-weight="400" fill="#8EB9FC">Publicação: Livro Editora</text>
+  <text x="106" y="431" font-family="'Source Sans 3', sans-serif" font-size="10.5" font-weight="400" fill="#AAA7FF">[Substituir pela capa oficial aprovada]</text>
+</svg>

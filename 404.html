@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página não encontrada | Vitorino Saúde &amp; Vitorino Odontologia</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="assets/logo-vitorino.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Redirecionamento inteligente para rotas antigas no GitHub Pages
+    (function () {
+      var path = window.location.pathname.toLowerCase();
+      if (path.endsWith('/code') || path.endsWith('/code.html') || path.endsWith('/a-vitorino') || path.endsWith('/a-vitorino.html')) {
+        window.location.replace('quem-somos.html');
+      } else if (path.endsWith('/atendimentos') || path.endsWith('/atendimentos.html')) {
+        window.location.replace('vitorino-odontologia.html');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-main">
+      <a href="index.html" class="brand-logo" aria-label="Vitorino Saúde — Página inicial">
+        <img src="assets/logo-vitorino-saude.svg" alt="Logotipo Vitorino Saúde" width="230" height="48">
+      </a>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+        <span class="menu-toggle__label">Menu</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="quem-somos.html" class="nav-link">Quem somos</a></li>
+          <li><a href="vitorino-odontologia.html" class="nav-link nav-link--odonto">Vitorino Odontologia</a></li>
+          <li><a href="parceiros.html" class="nav-link">Parceiros</a></li>
+          <li><a href="https://vitorino-odontologia.blogspot.com/" class="nav-link" target="_blank" rel="noopener noreferrer">Blog</a></li>
+          <li><a href="contato.html" class="nav-link">Contato</a></li>
+        </ul>
+        <a href="contato.html" class="btn btn--odonto btn--sm nav-cta">Sou novo paciente</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+    <section class="section section--white">
+      <div class="container" style="max-width: 760px; text-align: center;">
+        <span class="area-badge area-badge--saude">Erro 404 · Página não encontrada</span>
+        <h1 class="section-title">Não encontramos o endereço que você procurou.</h1>
+        <p class="section-lead" style="margin-bottom: 32px;">
+          O link acessado pode ter sido atualizado na nova estrutura do site da <strong>Vitorino Saúde</strong> e da <strong>Vitorino Odontologia</strong>. Utilize um dos caminhos abaixo para continuar sua navegação:
+        </p>
+
+        <div class="btn-group" style="justify-content: center;">
+          <a href="index.html" class="btn btn--primary">Ir para a Página Inicial</a>
+          <a href="vitorino-odontologia.html" class="btn btn--odonto">Vitorino Odontologia</a>
+          <a href="quem-somos.html" class="btn btn--outline">Quem somos e Trajetória</a>
+          <a href="contato.html" class="btn btn--saude">Sou novo paciente / Contato</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <p>© 2026 Vitorino Saúde &amp; Vitorino Odontologia · Dra. Danielly Vitorino — Dra HospitalLAR (CRO-DF 14.465)</p>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+          <a href="index.html" style="color: var(--blue-saude);">Início</a>
+          <a href="contato.html" style="color: var(--blue-saude);">Contato</a>
+          <a href="politica-privacidade.html" style="color: var(--blue-saude);">Política de Privacidade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
