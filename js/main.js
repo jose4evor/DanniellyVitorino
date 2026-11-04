@@ -288,6 +288,11 @@
         category: safeCategory,
         timestamp: new Date().toISOString()
       });
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'whatsapp_intent_click', {
+          intent_category: safeCategory
+        });
+      }
     }
   };
 
